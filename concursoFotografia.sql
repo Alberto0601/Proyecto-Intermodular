@@ -19,7 +19,7 @@ CREATE TABLE if not exists participantes (
     FOREIGN KEY (id_equipo) REFERENCES equipos(id_equipo)
 );
 
-CREATE TABLE fotos (
+CREATE TABLE if not exists fotos (
     id_foto INT AUTO_INCREMENT PRIMARY KEY,
     id_participante INT NOT NULL,
     nombre_foto VARCHAR(150),
