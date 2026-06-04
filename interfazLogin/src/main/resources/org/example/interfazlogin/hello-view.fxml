@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="org.example.interfazlogin.HelloController">
+
+    <children>
+
+        <VBox alignment="CENTER"
+              maxWidth="350"
+              spacing="15"
+              styleClass="login-card">
+
+            <children>
+
+                <Label text="Bienvenido"
+                       styleClass="title"/>
+
+                <Label text="Inicia sesión"
+                       styleClass="subtitle"/>
+
+                <TextField fx:id="txtUsuario"
+                           promptText="Usuario"/>
+
+                <PasswordField fx:id="txtPassword"
+                               promptText="Contraseña"/>
+
+                <Button text="Iniciar sesión"
+                        onAction="#iniciarSesion"
+                        maxWidth="Infinity"
+                        styleClass="login-button"/>
+
+                <Label fx:id="lblMensaje"/>
+
+            </children>
+
+        </VBox>
+
+    </children>
+
+</StackPane>
+<!--contiene en el fxml el diseño de toda la ventana-->
