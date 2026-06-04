@@ -13,7 +13,6 @@ CREATE TABLE if not exists participantes (
     email VARCHAR(150) UNIQUE NOT NULL,
     telefono VARCHAR(20),
     id_equipo INT,
-    contraseña varchar(40),
     fecha_registro DATE DEFAULT (CURRENT_DATE),
     hora_registro TIME DEFAULT (CURRENT_TIME),
     FOREIGN KEY (id_equipo) REFERENCES equipos(id_equipo)
@@ -35,10 +34,16 @@ CREATE TABLE if not exists jurado (
     nombre VARCHAR(100) NOT NULL,
     email VARCHAR(150) UNIQUE NOT NULL,
     telefono VARCHAR(20),
-    contraseña varchar(40),
     fecha_registro DATE DEFAULT (CURRENT_DATE),
     hora_registro TIME DEFAULT (CURRENT_TIME)
 );
+
+CREATE TABLE if not exists usuarios (
+    rol INT,
+    nombre VARCHAR(100) NOT NULL,
+    contraseña VARCHAR(100)
+);
+
 
 CREATE TABLE if not exists estudios (
     id_estudio INT AUTO_INCREMENT PRIMARY KEY,
@@ -78,16 +83,16 @@ INSERT INTO equipos (nombre_equipo, descripcion) VALUES
 ('FotoExplorers', 'Grupo dedicado a fotografía de naturaleza');
 
 INSERT INTO participantes (nombre, email, telefono, id_equipo, fecha_registro, hora_registro) VALUES
-('Alberto García', 'alberto@example.com', '600123456', 1, '2026-06-02', '10:15:00'),
-('Álvaro Ruiz', 'alvaro@example.com', '611987654', 2, '2026-06-02', '10:20:00'),
-('Héctor López', 'hector@example.com', '622555444', 3, '2026-06-02', '10:25:00'),
-('María Torres', 'maria@example.com', '633444333', 1, '2026-06-03', '09:10:00'),
-('Lucía Fernández', 'lucia@example.com', '644333222', 2, '2026-06-03', '09:12:00');
+('Alberto García', 'alberto@example.com', 1, '2026-06-02', '10:15:00'),
+('Álvaro Ruiz', 'alvaro@example.com', 2, '2026-06-02', '10:20:00'),
+('Héctor López', 'hector@example.com', 3, '2026-06-02', '10:25:00'),
+('María Torres', 'maria@example.com', 1, '2026-06-03', '09:10:00'),
+('Lucía Fernández', 'lucia@example.com', 2, '2026-06-03', '09:12:00');
 
 INSERT INTO jurado (nombre, email, telefono, contraseña, fecha_registro, hora_registro) VALUES
-('Carlos Méndez', 'carlos.mendez@jurado.com', '600112233', 'passCarlos2026', '2026-06-03', '10:00:00'),
-('Elena Rodríguez', 'elena.rodriguez@jurado.com', '611223344', 'elenaSecure26', '2026-06-03', '10:05:00'),
-('Javier Santos', 'javier.santos@jurado.com', '622334455', 'javierFoto26', '2026-06-03', '10:10:00');
+('Carlos Méndez', 'carlos.mendez@jurado.com', '600112233', '2026-06-03', '10:00:00'),
+('Elena Rodríguez', 'elena.rodriguez@jurado.com', '611223344', '2026-06-03', '10:05:00'),
+('Javier Santos', 'javier.santos@jurado.com', '622334455', '2026-06-03', '10:10:00');
 
 
 INSERT INTO estudios (nombre, ubicacion) VALUES
