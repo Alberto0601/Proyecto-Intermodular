@@ -15,7 +15,7 @@ CREATE TABLE if not exists usuarios (
     contraseña VARCHAR(100)
 );
 
-CREATE TABLE IF NOT EXISTS administrador (
+CREATE TABLE if not exists administrador (
     id_administrador INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT UNIQUE,
     nombre VARCHAR(100) NOT NULL,
