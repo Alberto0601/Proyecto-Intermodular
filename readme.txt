@@ -1,6 +1,3 @@
-El perfil de administrador podemos ponerlo integrado en el codigo en vez de ser una tabla adicional
-
-
 Métodos
 -	Iniciar sesión participante
 -	Iniciar sesión jurado
