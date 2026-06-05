@@ -7,7 +7,7 @@ CREATE TABLE if not exists usuarios (
 	id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     rol INT,
     nombre VARCHAR(100) NOT NULL,
-    contraseña VARCHAR(100)
+    pass VARCHAR(100)
 );
 
 CREATE TABLE if not exists administrador (
@@ -86,7 +86,7 @@ CREATE TABLE if not exists resultados (
 );
 
 -- USUARIOS
-INSERT INTO usuarios (rol, nombre, contraseña) VALUES
+INSERT INTO usuarios (rol, nombre, pass) VALUES
 (1, 'Admin Principal', 'admin123'),
 (2, 'Jurado Ana', 'jurado123'),
 (2, 'Jurado Pedro', 'jurado456'),
