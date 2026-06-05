@@ -87,12 +87,12 @@ CREATE TABLE if not exists resultados (
 
 -- USUARIOS
 INSERT INTO usuarios (rol, nombre, pass) VALUES
-(1, 'Admin Principal', '$2b$10$Y8G1l.SkyUZ5Exr/71/jHOPwF/e5zXjaByJUqeuXELmpIXIMkVRqC'),
-(2, 'Jurado Ana', '$2b$10$Ol6nzxvOFUVOm5rnJfnGVuodxzzP.3.5SBp1k.ErMw/.NpPQZCKBy'),
-(2, 'Jurado Pedro', '$2b$10$qv5n9huF/yNQoG2pBJ..e.QLGrALyKu1YNDmlgk1xLqgoGGgUu0SC'),
-(3, 'Participante Juan', '$2b$10$xNigS.bZJDhJTGXcrkLiwebHUoQPb22YJaOAE77HPYgxg2dfY6aqW'),
-(3, 'Participante Laura', '$2b$10$fFcWOLS3PILkex9ireJiwedqaE9Ob0OV7FZOjhIq7ZlMB73aAnsmG'),
-(3, 'Participante Carlos', '$2b$10$grHcMDzGX0Lk.27/hxO83.L.xtZ3WSxnC2bCIMuER0eeBy.w.eR1e');
+(1, 'Admin', '$2b$10$Y8G1l.SkyUZ5Exr/71/jHOPwF/e5zXjaByJUqeuXELmpIXIMkVRqC'),
+(2, 'Ana', '$2b$10$Ol6nzxvOFUVOm5rnJfnGVuodxzzP.3.5SBp1k.ErMw/.NpPQZCKBy'),
+(2, 'Pedro', '$2b$10$qv5n9huF/yNQoG2pBJ..e.QLGrALyKu1YNDmlgk1xLqgoGGgUu0SC'),
+(3, 'Juan', '$2b$10$xNigS.bZJDhJTGXcrkLiwebHUoQPb22YJaOAE77HPYgxg2dfY6aqW'),
+(3, 'Laura', '$2b$10$fFcWOLS3PILkex9ireJiwedqaE9Ob0OV7FZOjhIq7ZlMB73aAnsmG'),
+(3, 'Carlos', '$2b$10$grHcMDzGX0Lk.27/hxO83.L.xtZ3WSxnC2bCIMuER0eeBy.w.eR1e');
 
 
 -- ADMINISTRADOR
