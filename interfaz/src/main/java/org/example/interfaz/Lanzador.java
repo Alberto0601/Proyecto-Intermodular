@@ -10,12 +10,11 @@ public class Lanzador extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        FXMLLoader loader =
-                new FXMLLoader(getClass().getResource("hello-view.fxml"));//esto es para ir sacando nuevas
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));//carga el fxml
 
-        Scene scene = new Scene(loader.load(), 500, 500);
+        Scene scene = new Scene(loader.load(), 650, 650);
 
-        stage.setTitle("Iniciar sesion");
+        stage.setTitle("Camera Cup");
         stage.setScene(scene);
         stage.show();
     }

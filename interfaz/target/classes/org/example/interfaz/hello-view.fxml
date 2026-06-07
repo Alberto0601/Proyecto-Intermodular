@@ -1,43 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
 <StackPane xmlns:fx="http://javafx.com/fxml"
            fx:controller="org.example.interfaz.Controlador"
-           >
+           style="-fx-background-color: #f3f4f6;
+           -fx-font-family: 'Segoe UI', Arial, sans-serif;">
 
     <children>
-
         <VBox alignment="CENTER"
               maxWidth="350"
-              spacing="15"
-              styleClass="login-card">
+              maxHeight="580"
+              spacing="16"
+              style="-fx-background-color: #ffffff;
+              -fx-padding: 30px 40px;
+              -fx-background-radius: 12px;
+              -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 15, 0, 0, 10);">
 
             <children>
 
+                <ImageView fitWidth="60"
+                           fitHeight="60"
+                           preserveRatio="true"
+                           style="-fx-opacity: 0.85;">
+                    <image>
+                        <Image url="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"/>
+                    </image>
+                </ImageView>
+
                 <Label text="Bienvenido"
-                       styleClass="title"/>
+                       style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1f2937;"/>
 
                 <Label text="Inicia sesión para continuar"
-                       styleClass="subtitle"/>
+                       style="-fx-font-size: 14px; -fx-text-fill: #6b7280; -fx-padding: 0 0 5px 0;"/>
 
                 <TextField fx:id="txtUsuario"
-                           promptText="Usuario"/>
+                           promptText="Usuario"
+                           style="-fx-control-inner-background: #ffffff;
+                           -fx-background-radius: 6px;
+                           -fx-border-color: #d1d5db;
+                           -fx-border-radius: 6px;
+                           -fx-border-width: 1px;
+                           -fx-padding: 10px 12px;
+                           -fx-font-size: 14px;
+                           -fx-text-fill: #1f2937;"/>
 
                 <PasswordField fx:id="txtPassword"
-                               promptText="Contraseña"/>
+                               promptText="Contraseña"
+                               style="-fx-control-inner-background: #ffffff;
+                               -fx-background-radius: 6px;
+                               -fx-border-color: #d1d5db;
+                               -fx-border-radius: 6px;
+                               -fx-border-width: 1px;
+                               -fx-padding: 10px 12px;
+                               -fx-font-size: 14px;
+                               -fx-text-fill: #1f2937;"/>
 
                 <Button text="Iniciar sesión"
                         onAction="#iniciarSesion"
                         maxWidth="Infinity"
-                        styleClass="login-button"/>
+                        style="-fx-background-color: #4f46e5;
+                        -fx-text-fill: #ffffff;
+                        -fx-font-size: 14px;
+                        -fx-font-weight: bold;
+                        -fx-background-radius: 6px;
+                        -fx-padding: 12px;
+                        -fx-cursor: hand;"/>
 
-                <Label text="¿olvidaste tu contraseña?"
-                       styleClass="subtitle"/><!--click para que te lleve a recuperarla si da tiempo-->
-
-                <Label fx:id="lblMensaje"/>
-
+                <Label fx:id="lblMensaje"
+                       style="-fx-font-size: 13px; -fx-text-fill: #ef4444;"/>
             </children>
 
         </VBox>

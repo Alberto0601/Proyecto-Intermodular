@@ -4,7 +4,7 @@ public class CredencialesInvalidasException extends Exception {
 
     public CredencialesInvalidasException() {
 
-        super("Credeciales no validas, inténtelo de nuevo");
+        super("Credenciales no válidas, inténtelo de nuevo");
     }
 
     public CredencialesInvalidasException(String mensaje) {

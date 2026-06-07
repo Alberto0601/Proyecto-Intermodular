@@ -39,9 +39,9 @@ public class ServicioUsuarios {
             System.err.println("No existe el usuario en la BBDD");
             return null;
         }catch (CredencialesInvalidasException e){
-            System.err.println("Error al obtener el inicio de sesión: "+e.getMessage());
+            System.err.println("Error durante el inicio de sesión: "+e.getMessage());
             return null;
-        }
+        }//mirar pq no me lanza la excepción
     }
 }
 
