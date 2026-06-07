@@ -15,12 +15,16 @@ public class Resultado {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_participante", nullable = false)
-    private Participante idParticipante;
+    @JoinColumn(name = "id_usuario_participante", nullable = false)
+    private Participante idUsuarioParticipante;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_concurso", nullable = false)
     private Concurso idConcurso;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "id_usuario_jurado", nullable = false)
+    private Jurado idUsuarioJurado;
 
     @Column(name = "puntuacion", nullable = false)
     private Integer puntuacion;
@@ -41,12 +45,12 @@ public class Resultado {
         this.id = id;
     }
 
-    public Participante getIdParticipante() {
-        return idParticipante;
+    public Participante getIdUsuarioParticipante() {
+        return idUsuarioParticipante;
     }
 
-    public void setIdParticipante(Participante idParticipante) {
-        this.idParticipante = idParticipante;
+    public void setIdUsuarioParticipante(Participante idUsuarioParticipante) {
+        this.idUsuarioParticipante = idUsuarioParticipante;
     }
 
     public Concurso getIdConcurso() {
@@ -55,6 +59,14 @@ public class Resultado {
 
     public void setIdConcurso(Concurso idConcurso) {
         this.idConcurso = idConcurso;
+    }
+
+    public Jurado getIdUsuarioJurado() {
+        return idUsuarioJurado;
+    }
+
+    public void setIdUsuarioJurado(Jurado idUsuarioJurado) {
+        this.idUsuarioJurado = idUsuarioJurado;
     }
 
     public Integer getPuntuacion() {

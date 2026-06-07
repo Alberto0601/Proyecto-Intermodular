@@ -1,6 +1,7 @@
 package entidades;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDate;
 
@@ -24,6 +25,10 @@ public class Concurso {
     @Lob
     @Column(name = "descripcion")
     private String descripcion;
+
+    @ColumnDefault("'Activo'")
+    @Column(name = "estado", length = 20)
+    private String estado;
 
     public Integer getId() {
         return id;
@@ -63,6 +68,14 @@ public class Concurso {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
 }

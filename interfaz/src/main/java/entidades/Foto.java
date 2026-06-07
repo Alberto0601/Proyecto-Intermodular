@@ -15,8 +15,8 @@ public class Foto {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_participante", nullable = false)
-    private Participante idParticipante;
+    @JoinColumn(name = "id_usuario_participante", nullable = false)
+    private Participante idUsuarioParticipante;
 
     @Column(name = "nombre_foto", length = 150)
     private String nombreFoto;
@@ -32,8 +32,6 @@ public class Foto {
     @Column(name = "hora_subida")
     private LocalTime horaSubida;
 
-    public Foto() {}
-
     public Integer getId() {
         return id;
     }
@@ -42,12 +40,12 @@ public class Foto {
         this.id = id;
     }
 
-    public Participante getIdParticipante() {
-        return idParticipante;
+    public Participante getIdUsuarioParticipante() {
+        return idUsuarioParticipante;
     }
 
-    public void setIdParticipante(Participante idParticipante) {
-        this.idParticipante = idParticipante;
+    public void setIdUsuarioParticipante(Participante idUsuarioParticipante) {
+        this.idUsuarioParticipante = idUsuarioParticipante;
     }
 
     public String getNombreFoto() {

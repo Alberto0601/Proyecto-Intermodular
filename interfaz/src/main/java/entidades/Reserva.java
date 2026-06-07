@@ -17,8 +17,8 @@ public class Reserva {
     private Estudio idEstudio;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_participante", nullable = false)
-    private Participante idParticipante;
+    @JoinColumn(name = "id_usuario_participante", nullable = false)
+    private Participante idUsuarioParticipante;
 
     @Column(name = "fecha_inicio", nullable = false)
     private Instant fechaInicio;
@@ -42,12 +42,12 @@ public class Reserva {
         this.idEstudio = idEstudio;
     }
 
-    public Participante getIdParticipante() {
-        return idParticipante;
+    public Participante getIdUsuarioParticipante() {
+        return idUsuarioParticipante;
     }
 
-    public void setIdParticipante(Participante idParticipante) {
-        this.idParticipante = idParticipante;
+    public void setIdUsuarioParticipante(Participante idUsuarioParticipante) {
+        this.idUsuarioParticipante = idUsuarioParticipante;
     }
 
     public Instant getFechaInicio() {

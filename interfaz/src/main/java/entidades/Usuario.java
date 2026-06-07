@@ -1,6 +1,7 @@
 package entidades;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name = "usuarios", schema = "ConcursoFotografia")
@@ -10,14 +11,19 @@ public class Usuario {
     @Column(name = "id_usuario", nullable = false)
     private Integer id;
 
-    @Column(name = "rol")
-    private Integer rol;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_rol")
+    private Role idRol;
 
     @Column(name = "nombre", nullable = false, length = 100)
     private String nombre;
 
     @Column(name = "pass", length = 100)
     private String pass;
+
+    @ColumnDefault("1")
+    @Column(name = "activo")
+    private Boolean activo;
 
     public Integer getId() {
         return id;
@@ -27,12 +33,12 @@ public class Usuario {
         this.id = id;
     }
 
-    public Integer getRol() {
-        return rol;
+    public Role getIdRol() {
+        return idRol;
     }
 
-    public void setRol(Integer rol) {
-        this.rol = rol;
+    public void setIdRol(Role idRol) {
+        this.idRol = idRol;
     }
 
     public String getNombre() {
@@ -49,6 +55,14 @@ public class Usuario {
 
     public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public Boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(Boolean activo) {
+        this.activo = activo;
     }
 
 }

@@ -10,16 +10,13 @@ import java.time.LocalTime;
 @Table(name = "administrador", schema = "ConcursoFotografia")
 public class Administrador {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_administrador", nullable = false)
+    @Column(name = "id_usuario", nullable = false)
     private Integer id;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_usuario")
-    private Usuario idUsuario;
-
-    @Column(name = "nombre", nullable = false, length = 100)
-    private String nombre;
+    @MapsId
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "id_usuario", nullable = false)
+    private Usuario usuarios;
 
     @Column(name = "email", nullable = false, length = 150)
     private String email;
@@ -43,20 +40,12 @@ public class Administrador {
         this.id = id;
     }
 
-    public Usuario getIdUsuario() {
-        return idUsuario;
+    public Usuario getUsuarios() {
+        return usuarios;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setUsuarios(Usuario usuarios) {
+        this.usuarios = usuarios;
     }
 
     public String getEmail() {

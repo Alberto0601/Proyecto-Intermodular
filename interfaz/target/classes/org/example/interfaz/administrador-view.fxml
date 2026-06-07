@@ -3,28 +3,107 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.interfaz.ControladorAdministrador">
+<VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="850.0" spacing="25.0" style="-fx-background-color: #F3F4F6;
+      -fx-font-family: 'Segoe UI', 'System', 'sans-serif';" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.interfaz.ControladorAdministrador"><children>
 
-    <padding>
-        <Insets top="30" right="30" bottom="30" left="30"/>
-    </padding>
+    <VBox alignment="CENTER" spacing="5.0">
+        <children>
+            <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #111827;" text="Panel de Administración" />
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #6B7280;" text="Gestiona los componentes del sistema" />
+            <Label fx:id="lblSaludo" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #5543EE;" text="Cargando usuario..." />
+        </children>
+        <VBox.margin>
+            <Insets top="30.0" />
+        </VBox.margin>
+    </VBox>
 
-    <Label text="Gestión de Concursos"
-           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <GridPane hgap="20.0" vgap="20.0" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
 
-    <Button text="Dar de alta concurso"
-            prefWidth="250"
-            onAction="#darAltaConcurso"/><!--nombre de los métodos del controlador administrador-->
+            <VBox alignment="TOP_CENTER" spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-border-color: #E5E7EB; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.04), 12, 0, 0, 6);">
+                <children>
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" text="Concursos" />
+                    <VBox prefHeight="2.0" style="-fx-background-color: #5543EE; -fx-min-height: 2px; -fx-max-height: 2px;" />
+                    <VBox alignment="CENTER" spacing="12.0" VBox.vgrow="ALWAYS">
+                        <children>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #5543EE; -fx-background-radius: 8; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Dar de Alta Concurso" />
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D1D5DB; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #4B5563; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Modificar Concurso" />
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #EF4444; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #EF4444; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Dar de Baja Concurso" />
+                        </children>
+                    </VBox>
+                </children>
+                <padding>
+                    <Insets bottom="25.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+            </VBox>
 
-    <Button text="Modificar concurso"
-            prefWidth="250"
-            onAction="#modificarConcurso"/>
+            <VBox alignment="TOP_CENTER" spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-border-color: #E5E7EB; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.04), 12, 0, 0, 6);" GridPane.columnIndex="1">
+                <children>
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" text="Participantes" />
+                    <VBox prefHeight="2.0" style="-fx-background-color: #5543EE; -fx-min-height: 2px; -fx-max-height: 2px;" />
+                    <VBox alignment="CENTER" spacing="12.0" VBox.vgrow="ALWAYS">
+                        <children>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #5543EE; -fx-background-radius: 8; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Dar de Alta Participante" />
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D1D5DB; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #4B5563; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Modificar Participante" />
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #EF4444; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #EF4444; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Dar de Baja Participante" />
+                        </children>
+                    </VBox>
+                </children>
+                <padding>
+                    <Insets bottom="25.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+            </VBox>
 
-    <Button text="Dar de baja concurso"
-            prefWidth="250"
-            onAction="#darBajaConcurso"/>
+            <VBox alignment="TOP_CENTER" spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-border-color: #E5E7EB; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.04), 12, 0, 0, 6);" GridPane.columnIndex="2">
+                <children>
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" text="Jueces" />
+                    <VBox prefHeight="2.0" style="-fx-background-color: #5543EE; -fx-min-height: 2px; -fx-max-height: 2px;" />
+                    <VBox alignment="CENTER" spacing="12.0" VBox.vgrow="ALWAYS">
+                        <children>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #5543EE; -fx-background-radius: 8; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Dar de Alta Juez" />
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D1D5DB; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #4B5563; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Modificar Juez" />
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #EF4444; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #EF4444; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Dar de Baja Juez" />
+                        </children>
+                    </VBox>
+                </children>
+                <padding>
+                    <Insets bottom="25.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+            </VBox>
+
+        </children>
+        <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="10.0" />
+        </padding>
+    </GridPane>
+
+    <HBox alignment="CENTER_RIGHT" prefHeight="50.0">
+        <children>
+            <Button fx:id="btnCerrarSesion"
+                    onAction="#cerrar"
+                    mnemonicParsing="false"
+                    style="-fx-background-color: transparent; -fx-text-fill: #6B7280; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;"
+                    text="← Cerrar Sesión" />
+        </children>
+        <padding>
+            <Insets bottom="15.0" right="30.0" />
+        </padding>
+    </HBox>
+</children>
 </VBox>

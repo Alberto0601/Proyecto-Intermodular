@@ -26,14 +26,22 @@ public class Controlador {
     private Label lblMensaje;
 
     //metodo para cambiar ventana según el usuario
-    private void cambiarDeVentana(String fxml) throws IOException {
+    private void cambiarDeVentana(String fxml, Usuario usuario) throws IOException {
 
         FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource(fxml));//objeto clase FXMLLoader
 
         Scene scene = new Scene(fxmlLoad.load()); //objeto de la clase Scene
 
-        Stage stg=(Stage) txtUsuario.getScene().getWindow();
+        Object controladorDest = fxmlLoad.getController();//me da el controlador de la ventana que acaba de cargar
+        if (controladorDest instanceof ControladorAdministrador) {//esto de aquí es para llevarme el objeto usuario al resto de roles
+            ((ControladorAdministrador) controladorDest).setUsuarioAdmin(usuario);
+        } else if (controladorDest instanceof ControladorJuez) {
+            ((ControladorJuez) controladorDest).setUsuarioJuez(usuario);
+        } else if (controladorDest instanceof ControladorParticipante) {
+            ((ControladorParticipante) controladorDest).setUsuarioParticipante(usuario);
+        }
 
+        Stage stg = (Stage) txtUsuario.getScene().getWindow();
         stg.setScene(scene);
         stg.show();//mostrar
     }
@@ -52,21 +60,21 @@ public class Controlador {
 
             if (log != null) {//si el usuario existe
                 System.out.println(log.getNombre());
-                if(log.getRol()==1) {
+                if (log.getIdRol().getId() == 1) {
                     System.out.println("Rol 1 administrador");
-                    cambiarDeVentana("/org/example/interfaz/Administrador-view.fxml");//la ruta dnde está el fxml para que cargue la interfaz nueva
+                    cambiarDeVentana("/org/example/interfaz/administrador-view.fxml", log);//la ruta dnde está el fxml para que cargue la interfaz nueva y paso el log tbn
                     //que te mande a la vista de admin-->su pantalla
                     //controlador siguiente vista, mandar con un metodo el objeto y luego otro metodo para mostrar
-                }else if(log.getRol()==2) {
+                } else if (log.getIdRol().getId() == 2) {
                     System.out.println("Rol 2 jueces");
                     //que te mande a la vista de juez-->su pantalla
-                    cambiarDeVentana(("/org/example/interfaz/Jueces-view.fxml"));
-                }else if(log.getRol()==3) {
+                    cambiarDeVentana("/org/example/interfaz/juez-view.fxml", log);
+                } else if (log.getIdRol().getId() == 3) {
                     System.out.println("Rol 3 participantes");
                     //que te mande a la vista de participante-->su pantalla
-                    cambiarDeVentana(("/org/example/interfaz/Participantes-view.fxml"));
+                    cambiarDeVentana("/org/example/interfaz/participantes-view.fxml", log);
                 }
-            }else  {
+            } else {
                 System.out.println("Usuario no encontrado");
             }
         } catch (Exception e) {
