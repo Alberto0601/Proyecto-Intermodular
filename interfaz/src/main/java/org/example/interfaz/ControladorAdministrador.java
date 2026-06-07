@@ -18,7 +18,7 @@ public class ControladorAdministrador {
     private void cerrar(ActionEvent evento) {//evento para cerrar sesión
         try {
             //cargamos el login
-            FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource("/org/example/interfaz/hello-view.fxml"));//vuelvo hacia atrás caragando la interfaz anterior
+            FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource("/org/example/interfaz/hello-view.fxml"));//vuelvo hacia atrás cargando la interfaz anterior
             Parent root = fxmlLoad.load();
 
             //crear el nuevo escenario para login
