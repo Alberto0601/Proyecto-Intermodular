@@ -17,4 +17,6 @@ Admin
 Si sobra tiempo un método para volver al inicio
 
 Tabla con las contraseñas normales:
-INSERT INTO usuarios (rol, nombre, pass) VALUES (1, 'Admin Principal', 'admin123'), (2, 'Jurado Ana', 'jurado123'), (2, 'Jurado Pedro', 'jurado456'), (3, 'Participante Juan', 'pass123'), (3, 'Participante Laura', 'pass456'), (3, 'Participante Carlos', 'pass789'); tengo esta tabla, hazme el hash de esas contraseñas con el algoritmo de BCrypt para java
+INSERT INTO usuarios (rol, nombre, pass) VALUES (1, 'Admin Principal', 'admin123'), (2, 'Ana López', 'jurado123'), (2, 'Pedro Martín', 'jurado456'), (3, 'Juan Pérez', 'pass123'), (3, 'Laura Gómez', 'pass456'), (3, 'Carlos Ruiz', 'pass789');
+
+esta tabla tiene las contraseña sin el hash mientras que en la bbdd están hasheadas, es para hacer pruebas con los login
