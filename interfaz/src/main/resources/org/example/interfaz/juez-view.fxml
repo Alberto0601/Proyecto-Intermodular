@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.interfaz.ControladorJuez"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="900.0" spacing="20.0" style="-fx-background-color: #F4F4F4;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.interfaz.ControladorJuez">
+    <children>
 
-</AnchorPane>
+        <VBox alignment="CENTER" spacing="8.0">
+            <children>
+                <Label style="-fx-font-family: 'Segoe UI', 'Arial', sans-serif; -fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #111625;" text="Panel de Jueces" />
+                <Label style="-fx-font-family: 'Segoe UI', 'Arial', sans-serif; -fx-font-size: 14px; -fx-text-fill: #555555;" text="Gestione las notas de los participantes y mire la clasificación" />
+                <Label fx:id="lblSaludo" style="-fx-font-family: 'Segoe UI', 'Arial', sans-serif; -fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #5B4BEE;" text="Cargando usuario..." />
+            </children>
+            <VBox.margin>
+                <Insets top="60.0" />
+            </VBox.margin>
+        </VBox>
+
+        <HBox alignment="CENTER" prefHeight="300.0" prefWidth="200.0" spacing="60.0">
+            <children>
+                <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="234.0" style="-fx-background-color: #5B4BEE; -fx-background-radius: 18px; -fx-text-fill: white; -fx-font-family: 'Segoe UI', 'Arial', sans-serif; -fx-font-size: 18px; -fx-font-weight: bold; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(91, 75, 238, 0.25), 10, 0, 0, 5);" text="Asignar Puntuaciones" />
+
+                <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="233.0" style="-fx-background-color: #5B4BEE; -fx-background-radius: 18px; -fx-text-fill: white; -fx-font-family: 'Segoe UI', 'Arial', sans-serif; -fx-font-size: 18px; -fx-font-weight: bold; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(91, 75, 238, 0.25), 10, 0, 0, 5);" text="Consultar Resultados" />
+            </children>
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+        </HBox>
+
+        <HBox alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
+            <children>
+                <Button mnemonicParsing="false" onAction="#cerrarJ" style="-fx-background-color: transparent; -fx-text-fill: #6B7280; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="← Cerrar Sesión" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" right="30.0" />
+            </padding>
+        </HBox>
+
+    </children>
+</VBox>
