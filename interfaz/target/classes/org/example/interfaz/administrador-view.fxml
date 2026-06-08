@@ -98,7 +98,11 @@
             <Button fx:id="btnCerrarSesion"
                     onAction="#cerrar"
                     mnemonicParsing="false"
-                    style="-fx-background-color: transparent; -fx-text-fill: #6B7280; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;"
+                    style="-fx-background-color: transparent;
+                    -fx-text-fill: #6B7280;
+                    -fx-font-weight: bold;
+                    -fx-font-size: 13px;
+                    -fx-cursor: hand;"
                     text="← Cerrar Sesión" />
         </children>
         <padding>

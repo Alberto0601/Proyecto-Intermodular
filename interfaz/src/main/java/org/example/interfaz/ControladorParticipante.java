@@ -49,7 +49,7 @@ public class ControladorParticipante {
         this.usuarioIniciadoP = usuario;
 
         if (usuarioIniciadoP != null) {//si usuario iniciado existe...
-            lblSaludo.setText("El participante: " + usuarioIniciadoP.getNombre() + " ha iniciado sesión");
+            lblSaludo.setText("El participante " + usuarioIniciadoP.getNombre() + " ha iniciado sesión");
         }
     }
 }
