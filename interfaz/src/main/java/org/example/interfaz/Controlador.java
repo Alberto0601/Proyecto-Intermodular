@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import servicios.ServicioLog;
 import servicios.ServicioUsuarios;
 
 import java.io.IOException;
@@ -55,10 +56,12 @@ public class Controlador {
 
         try (EntityManager em = Persistence.createEntityManagerFactory("concursoFotos").createEntityManager();) {
 
+            ServicioLog.registrar("INFORMACIÓN: ", "Intento de inicio de sesión: " + usuario);
             ServicioUsuarios u = new ServicioUsuarios(em);
             Usuario log = u.login(usuario, password);
 
             if (log != null) {//si el usuario existe
+                ServicioLog.registrar("INFO", "Login EXITOSO. Usuario: " + log.getNombre() + " - Rol ID: " + log.getIdRol().getId());
                 System.out.println(log.getNombre());
                 if (log.getIdRol().getId() == 1) {
                     System.out.println("Rol 1 administrador");
@@ -75,9 +78,11 @@ public class Controlador {
                     cambiarDeVentana("/org/example/interfaz/participantes-view.fxml", log);
                 }
             } else {
+                ServicioLog.registrar("ADVERTENCIA", "Login FALLIDO. Credenciales incorrectas para: " + usuario);
                 System.out.println("Usuario no encontrado");
             }
         } catch (Exception e) {
+            ServicioLog.registrar("ERROR", "Error crítico en la base de datos al loguear a " + usuario + ": " + e.getMessage());
             System.err.println(e.getMessage());
         }
     }
