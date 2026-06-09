@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 public class ServicioLog {
 
-    private static final String ARCHIVO_DE_LOG = "logins.log";
+    private static final String ARCHIVO_DE_LOG = "logs.log";
     private static final DateTimeFormatter formateador = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public static void registrar(String nivel, String mensaje) {

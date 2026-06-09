@@ -1,6 +1,11 @@
 package org.example.interfaz;
 
+import entidades.Concurso;
 import entidades.Usuario;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class ControladorAdministrador {
 
@@ -55,10 +61,29 @@ public class ControladorAdministrador {
     }
 
     @FXML
-    private void darAltaConcurso() {
+    private void darAltaConcurso() {//metodo que estoy desarrollando ahora
 
-        System.out.println("Dar de alta el concurso");
         //metodo de un insert de un concurso
+        try(EntityManagerFactory emf= Persistence.createEntityManagerFactory("concursoFotos");
+            EntityManager em=emf.createEntityManager()) {
+
+            //Añadir un registro (objeto usuario)
+            Concurso c=new Concurso();
+            //añadiria manualmente un registro, ahora necesito que esto lo pueda hacer de forma visual el admin
+            c.setId(c.getId());
+            c.setNombre(c.getNombre());
+            c.setFechaInicio(c.getFechaInicio());
+            c.setFechaFin(c.getFechaFin());
+            c.setDescripcion(c.getDescripcion());
+            c.setEstado(c.getEstado());
+
+            em.getTransaction().begin();
+            em.persist(c);//añadiria el objeto Usuario
+            em.getTransaction().commit();
+
+        }catch (Exception e){
+            System.out.println(e.getMessage());//meter excepción propia
+        }
     }
 
     @FXML
