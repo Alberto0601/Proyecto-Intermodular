@@ -61,11 +61,12 @@ public class ControladorAdministrador {
         }
     }
 
+    //metodo de abrir formulario alta concurso
     @FXML
     private void abrirFormularioAltaConcurso() {
         try {
             // Carga el FXML del formulario
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-concurso.fxml")); // Ajusta la ruta a tus paquetes
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-concurso.fxml"));
             Parent root = loader.load();
 
             // Crea una ventana emergente de tipo modal
@@ -81,5 +82,27 @@ public class ControladorAdministrador {
             System.out.println("Error al cargar la vista del formulario: " + e.getMessage());
         }
     }
+
+    //metodo de abrir formulario alta participante y jueces (usuarios)
+    @FXML
+    private void abrirFormularioAltaUsuario() {
+        try {
+            // Carga el FXML del formulario
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-usuario.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Crear Nuevo Usuario");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.showAndWait(); // Muestra la ventana y espera a que termine
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error al cargar la vista del formulario: " + e.getMessage());
+        }
+    }
+
 }
 
