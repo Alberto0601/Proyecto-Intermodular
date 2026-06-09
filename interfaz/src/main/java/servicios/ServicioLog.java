@@ -19,21 +19,9 @@ public class ServicioLog {
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(ARCHIVO_DE_LOG, true))) {
             bw.write(lineaLog);
-            bw.newLine(); // Añade el salto de línea automático
+            bw.newLine();
         } catch (IOException e) {
             System.err.println("Error al escribir en el archivo de log: " + e.getMessage());
-        }
-    }
-
-    public static void leerLogs() {
-        try (BufferedReader br = new BufferedReader(new FileReader(ARCHIVO_DE_LOG))) {
-            String linea;
-            System.out.println("--- CONTENIDO DEL ARCHIVO DE LOGS ---");
-            while ((linea = br.readLine()) != null) {
-                System.out.println(linea);
-            }
-        } catch (IOException e) {
-            System.err.println("Error al leer el archivo de log: " + e.getMessage());
         }
     }
 }

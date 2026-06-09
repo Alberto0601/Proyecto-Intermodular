@@ -10,3 +10,22 @@
 [2026-06-09 12:45:12] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
 [2026-06-09 12:48:41] [INFORMACIÓN: ] Intento de inicio de sesión: admin
 [2026-06-09 12:48:41] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-09 19:23:15] [ERROR] Error crítico en la base de datos al loguear a admin: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling Driver.connect() [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+[2026-06-09 19:24:24] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-09 19:24:24] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-09 19:44:14] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-09 19:44:15] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-09 19:59:27] [INFORMACIÓN: ] Intento de inicio de sesión: Ana López
+[2026-06-09 19:59:28] [INFO] Login EXITOSO. Usuario: Ana López - Rol ID: 2
+[2026-06-09 20:20:09] [INFORMACIÓN: ] Intento de inicio de sesión: Pedro Martín
+[2026-06-09 20:20:09] [INFO] Login EXITOSO. Usuario: Pedro Martín - Rol ID: 2
+[2026-06-09 20:21:00] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruiz
+[2026-06-09 20:21:00] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
+[2026-06-09 20:21:23] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-09 20:21:23] [ADVERTENCIA] Login FALLIDO. Credenciales incorrectas para: admin
+[2026-06-09 20:21:39] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-09 20:21:39] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1

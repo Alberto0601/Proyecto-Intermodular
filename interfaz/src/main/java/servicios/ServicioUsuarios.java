@@ -41,7 +41,7 @@ public class ServicioUsuarios {
         }catch (CredencialesInvalidasException e){
             System.err.println("Error durante el inicio de sesión: "+e.getMessage());
             return null;
-        }//mirar pq no me lanza la excepción
+        }
     }
 }
 

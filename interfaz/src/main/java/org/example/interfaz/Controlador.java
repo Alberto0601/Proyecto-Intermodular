@@ -50,7 +50,6 @@ public class Controlador {
     @FXML
     protected void iniciarSesion() {    //metodo para iniciar sesion
         //sanitizar la string de usuario y password, importante decir que es de login
-        //si existe el usuario pasar a la siguiente ventana y llevarte al siguiente controlador los objetos que necesite
         String usuario = txtUsuario.getText();
         String password = txtPassword.getText();
 
