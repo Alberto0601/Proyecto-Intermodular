@@ -13,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -61,45 +62,24 @@ public class ControladorAdministrador {
     }
 
     @FXML
-    private void darAltaConcurso() {//metodo que estoy desarrollando ahora
+    private void abrirFormularioAltaConcurso() {
+        try {
+            // Carga el FXML del formulario
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-concurso.fxml")); // Ajusta la ruta a tus paquetes
+            Parent root = loader.load();
 
-        //metodo de un insert de un concurso
-        try(EntityManagerFactory emf= Persistence.createEntityManagerFactory("concursoFotos");
-            EntityManager em=emf.createEntityManager()) {
+            // Crea una ventana emergente de tipo modal
+            Stage stage = new Stage();
+            stage.setTitle("Crear Nuevo Concurso");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.showAndWait(); // Muestra la ventana y espera a que termine
 
-            //Añadir un registro (objeto usuario)
-            Concurso c=new Concurso();
-            //añadiria manualmente un registro, ahora necesito que esto lo pueda hacer de forma visual el admin
-            c.setId(c.getId());
-            c.setNombre(c.getNombre());
-            c.setFechaInicio(c.getFechaInicio());
-            c.setFechaFin(c.getFechaFin());
-            c.setDescripcion(c.getDescripcion());
-            c.setEstado(c.getEstado());
-
-            em.getTransaction().begin();
-            em.persist(c);//añadiria el objeto Usuario
-            em.getTransaction().commit();
-
-        }catch (Exception e){
-            System.out.println(e.getMessage());//meter excepción propia
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error al cargar la vista del formulario: " + e.getMessage());
         }
     }
-
-    @FXML
-    private void modificarConcurso() {
-
-        System.out.println("Modificar el concurso");
-        //metodo que es un update de la tabla concursos
-    }
-
-    @FXML
-    private void darBajaConcurso() {
-
-        System.out.println("Dar de baja el concurso");
-        //metodo que es un remove de la tabla concursos
-    }
-
-    //cad metodo te lleva a una interfaz nueva y ahí es donde se hacen las operaciones
 }
 

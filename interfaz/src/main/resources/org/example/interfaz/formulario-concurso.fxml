@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-padding: 25;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.interfaz.ControladorFormularioConcurso">
+    <children>
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #111827;" text="Nuevo Concurso" />
+        <Separator />
+
+        <GridPane hgap="15.0" vgap="15.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" minWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="30.0" />
+                <RowConstraints minHeight="30.0" />
+                <RowConstraints minHeight="30.0" />
+                <RowConstraints minHeight="80.0" />
+            </rowConstraints>
+            <children>
+                <Label text="Nombre:" />
+                <TextField fx:id="txtNombre" promptText="Ej: Concurso Fotografía" GridPane.columnIndex="1" />
+
+                <Label text="Fecha Inicio:" GridPane.rowIndex="1" />
+                <DatePicker fx:id="dpInicio" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Fecha Fin:" GridPane.rowIndex="2" />
+                <DatePicker fx:id="dpFin" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Descripción:" GridPane.rowIndex="3" />
+                <TextArea fx:id="txtDescripcion" promptText="Escribe aquí los detalles del concurso" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </children>
+        </GridPane>
+
+        <Separator />
+        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+            <children>
+                <Button fx:id="btnCancelar" onAction="#cancelar" style="-fx-background-color: #F3F4F6; -fx-text-fill: #4B5563;" text="Cancelar" />
+                <Button fx:id="btnGuardar" onAction="#guardarConcurso" style="-fx-background-color: #5543EE; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Guardar Concurso" />
+            </children>
+        </HBox>
+    </children>
+</VBox>
