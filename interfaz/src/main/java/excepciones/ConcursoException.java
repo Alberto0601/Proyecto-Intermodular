@@ -3,7 +3,7 @@ package excepciones;
 public class ConcursoException extends Exception {
 
     public ConcursoException() {
-        super("Error, el concurso ya existe");
+        super("Error, concurso no insertado");
     }
 
     public ConcursoException(String mensaje) {

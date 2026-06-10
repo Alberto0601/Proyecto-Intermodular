@@ -1,5 +1,7 @@
 package org.example.interfaz;
 
+import excepciones.ConcursoException;
+import excepciones.UsuariosException;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -21,11 +23,11 @@ public class ControladorFormularioConcurso {
      *metodo para guardar un concurso nuevo con JPA
      */
     @FXML
-    private void guardarConcurso() {
+    private void guardarConcurso()throws ConcursoException {
         //Validar que los campos obligatorios no estén vacíos
         if (txtNombre.getText().trim().isEmpty() || dpInicio.getValue() == null || dpFin.getValue() == null) {
             mostrarAlerta("Campos obligatorios", "Por favor, rellena el nombre y las fechas.", Alert.AlertType.WARNING);
-            return;
+            throw new ConcursoException();
         }
 
         //Extraer datos de la interfaz
