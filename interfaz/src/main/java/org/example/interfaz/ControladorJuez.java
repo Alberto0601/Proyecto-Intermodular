@@ -17,6 +17,10 @@ public class ControladorJuez {
     @FXML
     private Label lblSaludo;
 
+    /**
+     *
+     * @param evento este evento cierra sesion y te devuelve a la pantalla de login
+     */
     @FXML
     private void cerrarJ(ActionEvent evento) {//evento para cerrar sesión
         try {
@@ -45,6 +49,10 @@ public class ControladorJuez {
 
     private Usuario usuarioIniciadoJ;
 
+    /**
+     * metodo que me muestra que si el usuario existe manda un mensaje del usuario que ha iniciado sesión
+     * @param usuario
+     */
     public void setUsuarioJuez(Usuario usuario) {
         this.usuarioIniciadoJ = usuario;
 

@@ -17,6 +17,9 @@ public class ControladorFormularioConcurso {
     @FXML private TextArea txtDescripcion;
     @FXML private Button btnCancelar;
 
+    /**
+     *metodo para guardar un concurso nuevo con JPA
+     */
     @FXML
     private void guardarConcurso() {
         //Validar que los campos obligatorios no estén vacíos

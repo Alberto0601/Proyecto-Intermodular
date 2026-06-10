@@ -45,6 +45,10 @@ public class ControladorFormularioUsuario {
         comboRol.setButtonCell(comboRol.getCellFactory().call(null));
     }
 
+    /**
+     * metodo que guarda un nuevo usuario en la BBDD
+     * @throws UsuariosException lanza mi excepción personalizada en caso de que haya campos vacios
+     */
     @FXML
     private void guardarUsuario()throws UsuariosException {
         // Validación de campos vacíos obligatorios
@@ -69,7 +73,7 @@ public class ControladorFormularioUsuario {
             em.getTransaction().begin();
 
             Role rolSeleccionado = comboRol.getValue();
-            // Buscamos el registro real usando el ID de la clave primaria mapeada
+            // Busca el registro real usando el ID de la clave primaria mapeada
             Role rolAsignado = em.find(Role.class, rolSeleccionado.getId());
 
             if (rolAsignado == null) {
@@ -77,7 +81,6 @@ public class ControladorFormularioUsuario {
                 em.getTransaction().rollback();
                 return;
             }
-
             // Vinculamos el objeto Rol encontrado a la entidad Usuario
             u.setIdRol(rolAsignado);
 

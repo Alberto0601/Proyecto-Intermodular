@@ -45,6 +45,10 @@ public class ControladorParticipante {
 
     private Usuario usuarioIniciadoP;
 
+    /**
+     *  metodo que me muestra que si el usuario existe manda un mensaje del usuario que ha iniciado sesión
+     * @param usuario
+     */
     public void setUsuarioParticipante(Usuario usuario) {
         this.usuarioIniciadoP = usuario;
 

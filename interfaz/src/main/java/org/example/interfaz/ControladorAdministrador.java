@@ -47,12 +47,15 @@ public class ControladorAdministrador {
         }
     }
 
-    //metodo para traer el objeto usuario a la ventana administrador
     @FXML
     private Label lblSaludo;
 
     private Usuario usuarioIniciado;
 
+    /**
+     *
+     * @param usuario metodo para traer el objeto usuario a la interfaz de administrador
+     */
     public void setUsuarioAdmin(Usuario usuario) {
         this.usuarioIniciado = usuario;
 
@@ -61,7 +64,9 @@ public class ControladorAdministrador {
         }
     }
 
-    //metodo de abrir formulario alta concurso
+    /**
+     * metodo para abrir el formulario de alta de los concursos
+     */
     @FXML
     private void abrirFormularioAltaConcurso() {
         try {
@@ -83,7 +88,9 @@ public class ControladorAdministrador {
         }
     }
 
-    //metodo de abrir formulario alta participante y jueces (usuarios)
+    /**
+     * metodo para abrir el formulario de alta de participantes y jueces
+     */
     @FXML
     private void abrirFormularioAltaUsuario() {
         try {

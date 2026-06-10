@@ -9,7 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class ServicioUsuarios {
 
-    //Constantes atributos
+    //Constantes
     private final EntityManager em;
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(); //encriptador
 
@@ -17,8 +17,12 @@ public class ServicioUsuarios {
         this.em = em;
     }
 
-    //metodo
-
+    /**
+     * metodo para que el login funcione
+     * @param nombre
+     * @param passwordPlana
+     * @return
+     */
     public Usuario login(String nombre, String passwordPlana){
         try {
             TypedQuery<Usuario> query = em.createQuery(

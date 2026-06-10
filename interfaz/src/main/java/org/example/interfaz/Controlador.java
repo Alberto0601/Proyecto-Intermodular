@@ -26,7 +26,12 @@ public class Controlador {
     @FXML
     private Label lblMensaje;
 
-    //metodo para cambiar ventana según el usuario
+    /**
+     * metodo que cambia la ventana segun el usuario que inicie
+     * @param fxml
+     * @param usuario
+     * @throws IOException
+     */
     private void cambiarDeVentana(String fxml, Usuario usuario) throws IOException {
 
         FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource(fxml));//objeto clase FXMLLoader
@@ -44,9 +49,12 @@ public class Controlador {
 
         Stage stg = (Stage) txtUsuario.getScene().getWindow();
         stg.setScene(scene);
-        stg.show();//mostrar
+        stg.show();
     }
 
+    /**
+     * metodo que lleva a cabo el inicio de sesión de la aplicación
+     */
     @FXML
     protected void iniciarSesion() {    //metodo para iniciar sesion
         //sanitizar la string de usuario y password, importante decir que es de login

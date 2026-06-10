@@ -13,6 +13,11 @@ public class ServicioLog {
     private static final String ARCHIVO_DE_LOG = "logs.log";
     private static final DateTimeFormatter formateador = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
+    /**
+     * metodo que me registra en mi archivo .log los inicios de sesión
+     * @param nivel
+     * @param mensaje
+     */
     public static void registrar(String nivel, String mensaje) {
         String fechaHora = LocalDateTime.now().format(formateador);
         String lineaLog = String.format("[%s] [%s] %s", fechaHora, nivel, mensaje);
