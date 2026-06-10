@@ -1,0 +1,9 @@
+[2026-06-10 16:46:13] [ERROR] Error crítico en la base de datos al loguear a admin: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling Driver.connect() [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+[2026-06-10 16:48:52] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 16:48:52] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 17:05:42] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 17:05:42] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1

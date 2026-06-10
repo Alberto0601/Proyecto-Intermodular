@@ -12,12 +12,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextInputDialog;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Optional;
 
 public class ControladorAdministrador {
 
@@ -108,6 +111,65 @@ public class ControladorAdministrador {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Error al cargar la vista del formulario: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    private void abrirModificarConcurso() {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Modificar Concurso");
+        dialog.setHeaderText("Buscar concurso por ID");
+        dialog.setContentText("Introduce el ID numérico del concurso:");
+
+        Optional<String> resultado = dialog.showAndWait();
+        if (!resultado.isPresent() || resultado.get().trim().isEmpty()) {
+            return;
+        }
+
+        Integer idBuscado;
+        try {
+            idBuscado = Integer.parseInt(resultado.get().trim());
+        } catch (NumberFormatException e) {
+            AlertaHelper.mostrar("Formato Erróneo", "El ID ingresado debe ser un número entero válido.", Alert.AlertType.ERROR);
+            return;
+        }
+
+        // Búsqueda del concurso
+        Concurso concursoEncontrado = null;
+        try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("concursoFotos");
+             EntityManager em = emf.createEntityManager()) {
+
+            concursoEncontrado = em.find(Concurso.class, idBuscado);
+
+        } catch (Exception e) {
+            AlertaHelper.mostrar("Error de Conexión", "No se pudo consultar el registro: " + e.getMessage(), Alert.AlertType.ERROR);
+            return;
+        }
+
+        // Alerta si la búsqueda en BD es fallida
+        if (concursoEncontrado == null) {
+            AlertaHelper.mostrar("No encontrado", "No se localizó ningún concurso con el ID: " + idBuscado, Alert.AlertType.WARNING);
+            return;
+        }
+
+        // Despliegue de la interfaz enviando los datos de la entidad encontrada
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-modificar-concurso.fxml"));
+            Parent root = loader.load();
+
+            ControladorModificarConcurso controladorModif = loader.getController();
+            controladorModif.cargarConcurso(concursoEncontrado);
+
+            Stage stage = new Stage();
+            stage.setTitle("Modificar Concurso #" + concursoEncontrado.getId());
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            AlertaHelper.mostrar("Error de Interfaz", "Error al inicializar la pantalla de edición: " + e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
