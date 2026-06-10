@@ -258,5 +258,62 @@ public class ControladorAdministrador {
         }
     }
 
+    @FXML
+    private void abrirBajaConcurso() {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Dar de Baja Concurso");
+        dialog.setHeaderText("Baja de concurso por ID");
+        dialog.setContentText("Introduce el ID numérico del concurso a dar de baja:");
+
+        Optional<String> resultado = dialog.showAndWait();
+        if (!resultado.isPresent() || resultado.get().trim().isEmpty()) {
+            return;
+        }
+
+        Integer idBuscado;
+        try {
+            idBuscado = Integer.parseInt(resultado.get().trim());
+        } catch (NumberFormatException e) {
+            AlertaHelper.mostrar("Formato Erróneo", "El ID ingresado debe ser un número entero válido.", Alert.AlertType.ERROR);
+            return;
+        }
+
+        Concurso concursoEncontrado = null;
+        try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("concursoFotos");
+             EntityManager em = emf.createEntityManager()) {
+
+            concursoEncontrado = em.find(Concurso.class, idBuscado);
+
+        } catch (Exception e) {
+            AlertaHelper.mostrar("Error de Conexión", "No se pudo conectar con la base de datos: " + e.getMessage(), Alert.AlertType.ERROR);
+            return;
+        }
+
+        if (concursoEncontrado == null) {
+            AlertaHelper.mostrar("No encontrado", "No existe ningún concurso activo con el ID: " + idBuscado, Alert.AlertType.WARNING);
+            return;
+        }
+
+        // Despliegue de la interfaz específica de baja
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-baja-concurso.fxml"));
+            Parent root = loader.load();
+
+            ControladorBajaConcurso controladorBaja = loader.getController();
+            controladorBaja.cargarConcurso(concursoEncontrado);
+
+            Stage stage = new Stage();
+            stage.setTitle("Dar de Baja Concurso #" + concursoEncontrado.getId());
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            AlertaHelper.mostrar("Error", "No se pudo abrir la ventana de confirmación: " + e.getMessage(), Alert.AlertType.ERROR);
+        }
+    }
+
 }
 

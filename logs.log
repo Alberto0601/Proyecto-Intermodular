@@ -15,3 +15,16 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [2026-06-10 17:21:34] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
 [2026-06-10 20:07:52] [INFORMACIÓN: ] Intento de inicio de sesión: admin
 [2026-06-10 20:07:53] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:16:18] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:16:18] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:16:52] [INFORMACIÓN: ] Intento de inicio de sesión: a
+[2026-06-10 20:16:52] [INFO] Login EXITOSO. Usuario: a - Rol ID: 3
+[2026-06-10 20:21:22] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:21:22] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:21:22] [ERROR] Error crítico en la base de datos al loguear a admin: 
+/D:/Proyecto%20F/Proyecto-Intermodular/interfaz/target/classes/org/example/interfaz/administrador-view.fxml:80
+
+[2026-06-10 20:23:32] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:23:33] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:25:09] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:25:09] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
