@@ -214,5 +214,49 @@ public class ControladorAdministrador {
         }
     }
 
+    @FXML
+    private void abrirModificarParticipante() {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Modificar Participante");
+        dialog.setHeaderText("Buscar Participante por ID");
+        dialog.setContentText("Introduce el ID del participante:");
+
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent() && !result.get().trim().isEmpty()) {
+            try {
+                Integer id = Integer.parseInt(result.get().trim());
+
+                try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("concursoFotos");
+                     EntityManager em = emf.createEntityManager()) {
+
+                    Usuario u = em.find(Usuario.class, id);
+
+                    // VALIDACIÓN ESPECÍFICA: Debe existir y su rol debe ser Participante (ID 3)
+                    if (u != null && u.getIdRol() != null && u.getIdRol().getId() == 3) {
+
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-modificar-participante.fxml"));
+                        Parent root = loader.load();
+
+                        ControladorModificarParticipante controller = loader.getController();
+                        controller.cargarDatos(u);
+
+                        Stage stage = new Stage();
+                        stage.setTitle("Editando Participante: " + u.getNombre());
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.setScene(new Scene(root));
+                        stage.showAndWait();
+
+                    } else {
+                        AlertaHelper.mostrar("Aviso", "No se encontró un Participante con ese ID.", Alert.AlertType.WARNING);
+                    }
+                }
+            } catch (NumberFormatException e) {
+                AlertaHelper.mostrar("Error", "El ID debe ser un número.", Alert.AlertType.ERROR);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }
 
