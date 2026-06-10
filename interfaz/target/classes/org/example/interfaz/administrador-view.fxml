@@ -66,7 +66,12 @@
 
                                 <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirModificarParticipante" prefHeight="40.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D1D5DB; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #4B5563; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Modificar Participante" />
 
-                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #EF4444; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #EF4444; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;" text="Dar de Baja Participante" />
+                                <Button maxWidth="1.7976931348623157E308"
+                                        mnemonicParsing="false"
+                                        onAction="#abrirBajaParticipante"
+                                        prefHeight="40.0"
+                                        style="-fx-background-color: #FFFFFF; -fx-border-color: #EF4444; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #EF4444; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand;"
+                                        text="Dar de Baja Participante" />
                             </children>
                         </VBox>
                     </children>

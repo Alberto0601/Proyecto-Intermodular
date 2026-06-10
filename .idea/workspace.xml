@@ -8,10 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorAdministrador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/administrador-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/administrador-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/excepciones/ConcursoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/excepciones/ConcursoException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorAdministrador.class" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorAdministrador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorFormularioConcurso.class" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorFormularioConcurso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/administrador-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/administrador-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1781102683592</updated>
       <workItem from="1781102684648" duration="2353000" />
-      <workItem from="1781113538795" duration="2171000" />
+      <workItem from="1781113538795" duration="3817000" />
     </task>
     <servers />
   </component>
