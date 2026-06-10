@@ -360,5 +360,50 @@ public class ControladorAdministrador {
         }
     }
 
+    @FXML
+    private void abrirBajaJuez() {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Dar de Baja Juez");
+        dialog.setHeaderText("Desactivar Juez por ID");
+        dialog.setContentText("Introduce el ID del juez:");
+
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent() && !result.get().trim().isEmpty()) {
+            try {
+                Integer id = Integer.parseInt(result.get().trim());
+
+                try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("concursoFotos");
+                     EntityManager em = emf.createEntityManager()) {
+
+                    Usuario u = em.find(Usuario.class, id);
+
+                    if (u != null && u.getIdRol() != null && u.getIdRol().getId() == 2) {
+
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-baja-juez.fxml"));
+                        Parent root = loader.load();
+
+                        ControladorBajaJuez controller = loader.getController();
+                        controller.cargarDatos(u);
+
+                        Stage stage = new Stage();
+                        stage.setTitle("Baja de Juez: " + u.getNombre());
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.setScene(new Scene(root));
+                        stage.setResizable(false);
+                        stage.showAndWait();
+
+                    } else {
+                        AlertaHelper.mostrar("Aviso", "No se encontró un Juez con ese ID.", Alert.AlertType.WARNING);
+                    }
+                }
+            } catch (NumberFormatException e) {
+                AlertaHelper.mostrar("Error", "El ID debe ser un número entero válido.", Alert.AlertType.ERROR);
+            } catch (IOException e) {
+                e.printStackTrace();
+                AlertaHelper.mostrar("Error de Interfaz", "No se pudo cargar la ventana: " + e.getMessage(), Alert.AlertType.ERROR);
+            }
+        }
+    }
+
 }
 
