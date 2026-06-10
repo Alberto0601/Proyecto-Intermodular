@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed390c24-df2a-4612-952b-8b5efae1b583" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/interfaz/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/.idea/jpa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorAdministrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/administrador-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/administrador-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +51,7 @@
     "Application.Lanzador.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "#1 on alberto",
@@ -111,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1781102683592</updated>
-      <workItem from="1781102684648" duration="1238000" />
+      <workItem from="1781102684648" duration="2033000" />
     </task>
     <servers />
   </component>

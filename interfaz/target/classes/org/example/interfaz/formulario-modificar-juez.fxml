@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-padding: 25; -fx-font-family: 'Segoe UI', sans-serif;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.interfaz.ControladorModificarJuez">
+    <children>
+        <VBox spacing="5.0">
+            <children>
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #111827;" text="Modificar Juez" />
+                <Label style="-fx-font-size: 13px; -fx-text-fill: #6B7280;" text="Actualiza la información del juez seleccionado." />
+            </children>
+        </VBox>
+        <Separator />
+
+        <GridPane hgap="15.0" vgap="18.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" minWidth="140.0" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="35.0" />
+                <RowConstraints minHeight="35.0" />
+                <RowConstraints minHeight="35.0" />
+            </rowConstraints>
+            <children>
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Nombre Completo:" />
+                <TextField fx:id="txtNombre" prefHeight="35.0" style="-fx-background-radius: 8; -fx-border-color: #D1D5DB; -fx-border-radius: 8;" GridPane.columnIndex="1" />
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Nueva Contraseña:" GridPane.rowIndex="1" />
+                <PasswordField fx:id="txtPass" prefHeight="35.0" promptText="Dejar en blanco para no cambiar"
+                               style="-fx-background-radius: 8; -fx-border-color: #D1D5DB; -fx-border-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Estado:" GridPane.rowIndex="2" />
+                <CheckBox fx:id="chkActivo" text="Usuario Activo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+
+        <Separator />
+
+        <HBox alignment="CENTER_RIGHT" spacing="12.0">
+            <children>
+                <Button fx:id="btnCancelar" onAction="#cancelar" prefHeight="35.0" prefWidth="100.0"
+                        style="-fx-background-color: #F3F4F6; -fx-text-fill: #4B5563; -fx-background-radius: 8; -fx-font-weight: bold; -fx-cursor: hand;" text="Cancelar" />
+                <Button fx:id="btnGuardar" onAction="#guardarCambios" prefHeight="35.0" prefWidth="150.0"
+                        style="-fx-background-color: #5543EE; -fx-text-fill: #FFFFFF; -fx-background-radius: 8; -fx-font-weight: bold; -fx-cursor: hand;" text="Guardar Cambios" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

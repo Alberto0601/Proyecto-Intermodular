@@ -134,7 +134,6 @@ public class ControladorAdministrador {
             return;
         }
 
-        // Búsqueda del concurso
         Concurso concursoEncontrado = null;
         try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("concursoFotos");
              EntityManager em = emf.createEntityManager()) {
@@ -146,13 +145,11 @@ public class ControladorAdministrador {
             return;
         }
 
-        // Alerta si la búsqueda en BD es fallida
         if (concursoEncontrado == null) {
             AlertaHelper.mostrar("No encontrado", "No se localizó ningún concurso con el ID: " + idBuscado, Alert.AlertType.WARNING);
             return;
         }
 
-        // Despliegue de la interfaz enviando los datos de la entidad encontrada
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-modificar-concurso.fxml"));
             Parent root = loader.load();
@@ -170,6 +167,50 @@ public class ControladorAdministrador {
         } catch (IOException e) {
             e.printStackTrace();
             AlertaHelper.mostrar("Error de Interfaz", "Error al inicializar la pantalla de edición: " + e.getMessage(), Alert.AlertType.ERROR);
+        }
+    }
+
+    @FXML
+    private void abrirModificarJuez() {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Modificar Juez");
+        dialog.setHeaderText("Buscar el Juez por ID");
+        dialog.setContentText("Introduce la ID del juez:");
+
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent() && !result.get().trim().isEmpty()) {
+            try {
+                Integer id = Integer.parseInt(result.get().trim());
+
+                try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("concursoFotos");
+                     EntityManager em = emf.createEntityManager()) {
+
+                    Usuario u = em.find(Usuario.class, id);
+
+                    // IMPORTANTE: Validamos que el usuario exista y que su rol sea Juez (ID 2)
+                    if (u != null && u.getIdRol() != null && u.getIdRol().getId() == 2) {
+
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/formulario-modificar-juez.fxml"));
+                        Parent root = loader.load();
+
+                        ControladorModificarJuez controller = loader.getController();
+                        controller.cargarDatos(u);
+
+                        Stage stage = new Stage();
+                        stage.setTitle("Editando Juez: " + u.getNombre());
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.setScene(new Scene(root));
+                        stage.showAndWait();
+
+                    } else {
+                        AlertaHelper.mostrar("Aviso", "No se encontró un Juez con ese ID.", Alert.AlertType.WARNING);
+                    }
+                }
+            } catch (NumberFormatException e) {
+                AlertaHelper.mostrar("Error", "El ID debe ser un número.", Alert.AlertType.ERROR);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
