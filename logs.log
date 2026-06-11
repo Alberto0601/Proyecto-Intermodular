@@ -62,3 +62,9 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [2026-06-11 12:07:24] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
 [2026-06-11 12:13:27] [INFORMACIÓN: ] Intento de inicio de sesión: Ana López
 [2026-06-11 12:13:27] [INFO] Login EXITOSO. Usuario: Ana López - Rol ID: 2
+[2026-06-11 12:21:36] [INFORMACIÓN: ] Intento de inicio de sesión: Ana López
+[2026-06-11 12:21:37] [INFO] Login EXITOSO. Usuario: Ana López - Rol ID: 2
+[2026-06-11 12:23:05] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-11 12:23:05] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 12:23:36] [INFORMACIÓN: ] Intento de inicio de sesión: Ana López
+[2026-06-11 12:23:37] [INFO] Login EXITOSO. Usuario: Ana López - Rol ID: 2

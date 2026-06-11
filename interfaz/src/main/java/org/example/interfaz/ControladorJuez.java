@@ -85,4 +85,33 @@ public class ControladorJuez {
             lblSaludo.setText("El juez " + usuarioIniciadoJ.getNombre() + " ha iniciado sesión");
         }
     }
+    @FXML
+    private void abrirAsignarPuntuaciones() {
+        if (usuarioIniciadoJ == null) {
+            System.err.println("No se puede asignar puntuación sin una sesión activa.");
+            return;
+        }
+
+        try {
+            // Carga relativa: busca el FXML justo donde reside esta misma clase
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("asignar-puntuacion-view.fxml"));
+            Parent root = loader.load();
+
+            // Pasamos la sesión del juez conectado al formulario de asignación
+            ControladorAsignarPuntuacion modalController = loader.getController();
+            modalController.setJuezLogueado(usuarioIniciadoJ);
+
+            // Montamos la escena modal bloqueando interacciones traseras
+            Stage stageModal = new Stage();
+            stageModal.setTitle("Nueva Calificación - Panel de Jueces");
+            stageModal.initModality(javafx.stage.Modality.APPLICATION_MODAL);
+            stageModal.setScene(new Scene(root));
+            stageModal.setResizable(false);
+            stageModal.showAndWait();
+
+        } catch (IOException e) {
+            System.err.println("Error crítico al cargar el formulario FXML de asignar puntuaciones.");
+            e.printStackTrace();
+        }
+    }
 }
