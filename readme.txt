@@ -1,18 +1,7 @@
-Métodos
--	Iniciar sesión participante
--	Iniciar sesión jurado
--	Subir imagen
--	Consultar resultados
--	Mostrar imagen (para jurado)
--	Traer puntuación
--	Subir puntuación actualizada
-Admin
--	Ver concursos
--	Modificar concursos
--	Ver participantes
--	Modificar participantes
--	Ver jueces
--	Modificar jueces
+la ip elastica es: 3.230.64.41
+con puesrto: 3306
+usuario: root
+contraseña: root123
 
 Si sobra tiempo un método para volver al inicio
 
