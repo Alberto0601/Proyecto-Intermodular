@@ -56,4 +56,33 @@ public class ControladorParticipante {
             lblSaludo.setText("El participante " + usuarioIniciadoP.getNombre() + " ha iniciado sesión");
         }
     }
+
+    @FXML
+    private void abrirSubirFotografia() {
+        if (usuarioIniciadoP == null) {
+            System.err.println("No se puede abrir la ventana sin una sesión de participante activa.");
+            return;
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/subir-foto-view.fxml"));
+            Parent root = loader.load();
+
+            // Obtenemos el controlador secundario e inyectamos el usuario logueado
+            ControladorSubirFoto modalController = loader.getController();
+            modalController.setUsuarioLogueado(usuarioIniciadoP);
+
+            // Generamos la escena en estado APPLICATION_MODAL (Bloquea la interacción trasera)
+            Stage stageModal = new Stage();
+            stageModal.setTitle("Subir Archivo al Concurso");
+            stageModal.initModality(javafx.stage.Modality.APPLICATION_MODAL);
+            stageModal.setScene(new Scene(root));
+            stageModal.setResizable(false);
+            stageModal.showAndWait();
+
+        } catch (IOException e) {
+            System.err.println("Error al cargar la modal de subida: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }

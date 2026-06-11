@@ -38,3 +38,9 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [2026-06-10 22:13:55] [ADVERTENCIA] Login FALLIDO. Credenciales incorrectas para: admin
 [2026-06-10 22:14:08] [INFORMACIÓN: ] Intento de inicio de sesión: admin
 [2026-06-10 22:14:08] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 10:35:09] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-11 10:35:10] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 10:45:06] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-11 10:45:06] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 10:45:46] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruiz
+[2026-06-11 10:45:46] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3

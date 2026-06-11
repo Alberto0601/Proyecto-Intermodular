@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed390c24-df2a-4612-952b-8b5efae1b583" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/60bc35ab-c2eb-47cc-95e4-01044c2c4a1f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/60bc35ab-c2eb-47cc-95e4-01044c2c4a1f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorAdministrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/administrador-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/administrador-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorParticipante.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorParticipante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/participantes-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/participantes-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorParticipante.class" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorParticipante.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/participantes-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/participantes-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +39,20 @@
     &quot;assignee&quot;: &quot;Alberto0601&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Alberto0601/Proyecto-Intermodular.git&quot;,
-    &quot;accountId&quot;: &quot;44a08cf9-76a6-4a16-9f2c-05aa88cccb4d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Alberto0601/Proyecto-Intermodular.git",
+    "accountId": "5106ccbf-9ab3-42fc-9f30-8238269f0ece"
   }
-}</component>
+}]]></component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -46,29 +61,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Lanzador.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#1 on alberto&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Lanzador.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "#1 on alberto",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Lanzador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.interfaz.Lanzador" />
@@ -92,8 +108,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33813.25" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.33813.25" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +123,7 @@
       <workItem from="1781102684648" duration="2353000" />
       <workItem from="1781113538795" duration="4729000" />
       <workItem from="1781122330001" duration="82000" />
+      <workItem from="1781166769905" duration="980000" />
     </task>
     <servers />
   </component>

@@ -1,250 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="@192.168.1.45">
+<dataSource name="@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.54">
     <root id="1">
       <DefaultAuthPlugin>caching_sha2_password</DefaultAuthPlugin>
       <DefaultCasing>exact</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||alberto||ALTER|G
-|root||debian-sys-maint|localhost|ALTER|G
+      <Grants>|root||root||ALLOW_NONEXISTENT_DEFINER|G
+|root||root|localhost|ALLOW_NONEXISTENT_DEFINER|G
+|root||root||ALTER|G
 |root||root|localhost|ALTER|G
-|root||alberto||ALTER ROUTINE|G
-|root||debian-sys-maint|localhost|ALTER ROUTINE|G
+|root||root||ALTER ROUTINE|G
 |root||root|localhost|ALTER ROUTINE|G
-|root||alberto||APPLICATION_PASSWORD_ADMIN|G
-|root||debian-sys-maint|localhost|APPLICATION_PASSWORD_ADMIN|G
+|root||root||APPLICATION_PASSWORD_ADMIN|G
 |root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
-|root||alberto||AUDIT_ABORT_EXEMPT|G
 |root||mysql.infoschema|localhost|AUDIT_ABORT_EXEMPT|G
 |root||mysql.session|localhost|AUDIT_ABORT_EXEMPT|G
 |root||mysql.sys|localhost|AUDIT_ABORT_EXEMPT|G
+|root||root||AUDIT_ABORT_EXEMPT|G
 |root||root|localhost|AUDIT_ABORT_EXEMPT|G
-|root||alberto||AUDIT_ADMIN|G
-|root||debian-sys-maint|localhost|AUDIT_ADMIN|G
+|root||root||AUDIT_ADMIN|G
 |root||root|localhost|AUDIT_ADMIN|G
-|root||alberto||AUTHENTICATION_POLICY_ADMIN|G
-|root||debian-sys-maint|localhost|AUTHENTICATION_POLICY_ADMIN|G
 |root||mysql.session|localhost|AUTHENTICATION_POLICY_ADMIN|G
+|root||root||AUTHENTICATION_POLICY_ADMIN|G
 |root||root|localhost|AUTHENTICATION_POLICY_ADMIN|G
-|root||alberto||BACKUP_ADMIN|G
-|root||debian-sys-maint|localhost|BACKUP_ADMIN|G
 |root||mysql.session|localhost|BACKUP_ADMIN|G
+|root||root||BACKUP_ADMIN|G
 |root||root|localhost|BACKUP_ADMIN|G
-|root||alberto||BINLOG_ADMIN|G
-|root||debian-sys-maint|localhost|BINLOG_ADMIN|G
+|root||root||BINLOG_ADMIN|G
 |root||root|localhost|BINLOG_ADMIN|G
-|root||alberto||BINLOG_ENCRYPTION_ADMIN|G
-|root||debian-sys-maint|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||root||BINLOG_ENCRYPTION_ADMIN|G
 |root||root|localhost|BINLOG_ENCRYPTION_ADMIN|G
-|root||alberto||CLONE_ADMIN|G
-|root||debian-sys-maint|localhost|CLONE_ADMIN|G
 |root||mysql.session|localhost|CLONE_ADMIN|G
+|root||root||CLONE_ADMIN|G
 |root||root|localhost|CLONE_ADMIN|G
-|root||alberto||CONNECTION_ADMIN|G
-|root||debian-sys-maint|localhost|CONNECTION_ADMIN|G
 |root||mysql.session|localhost|CONNECTION_ADMIN|G
+|root||root||CONNECTION_ADMIN|G
 |root||root|localhost|CONNECTION_ADMIN|G
-|root||alberto||CREATE|G
-|root||debian-sys-maint|localhost|CREATE|G
+|root||root||CREATE|G
 |root||root|localhost|CREATE|G
-|root||alberto||CREATE ROLE|G
-|root||debian-sys-maint|localhost|CREATE ROLE|G
+|root||root||CREATE ROLE|G
 |root||root|localhost|CREATE ROLE|G
-|root||alberto||CREATE ROUTINE|G
-|root||debian-sys-maint|localhost|CREATE ROUTINE|G
+|root||root||CREATE ROUTINE|G
 |root||root|localhost|CREATE ROUTINE|G
-|root||alberto||CREATE TABLESPACE|G
-|root||debian-sys-maint|localhost|CREATE TABLESPACE|G
+|root||root||CREATE TABLESPACE|G
 |root||root|localhost|CREATE TABLESPACE|G
-|root||alberto||CREATE TEMPORARY TABLES|G
-|root||debian-sys-maint|localhost|CREATE TEMPORARY TABLES|G
+|root||root||CREATE TEMPORARY TABLES|G
 |root||root|localhost|CREATE TEMPORARY TABLES|G
-|root||alberto||CREATE USER|G
-|root||debian-sys-maint|localhost|CREATE USER|G
+|root||root||CREATE USER|G
 |root||root|localhost|CREATE USER|G
-|root||alberto||CREATE VIEW|G
-|root||debian-sys-maint|localhost|CREATE VIEW|G
+|root||root||CREATE VIEW|G
 |root||root|localhost|CREATE VIEW|G
-|root||alberto||DELETE|G
-|root||debian-sys-maint|localhost|DELETE|G
+|root||root||CREATE_SPATIAL_REFERENCE_SYSTEM|G
+|root||root|localhost|CREATE_SPATIAL_REFERENCE_SYSTEM|G
+|root||root||DELETE|G
 |root||root|localhost|DELETE|G
-|root||alberto||DROP|G
-|root||debian-sys-maint|localhost|DROP|G
+|root||root||DROP|G
 |root||root|localhost|DROP|G
-|root||alberto||DROP ROLE|G
-|root||debian-sys-maint|localhost|DROP ROLE|G
+|root||root||DROP ROLE|G
 |root||root|localhost|DROP ROLE|G
-|root||alberto||ENCRYPTION_KEY_ADMIN|G
-|root||debian-sys-maint|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||root||ENCRYPTION_KEY_ADMIN|G
 |root||root|localhost|ENCRYPTION_KEY_ADMIN|G
-|root||alberto||EVENT|G
-|root||debian-sys-maint|localhost|EVENT|G
+|root||root||EVENT|G
 |root||root|localhost|EVENT|G
-|root||alberto||EXECUTE|G
-|root||debian-sys-maint|localhost|EXECUTE|G
+|root||root||EXECUTE|G
 |root||root|localhost|EXECUTE|G
-|root||alberto||FILE|G
-|root||debian-sys-maint|localhost|FILE|G
+|root||root||FILE|G
 |root||root|localhost|FILE|G
-|root||alberto||FIREWALL_EXEMPT|G
 |root||mysql.infoschema|localhost|FIREWALL_EXEMPT|G
 |root||mysql.session|localhost|FIREWALL_EXEMPT|G
 |root||mysql.sys|localhost|FIREWALL_EXEMPT|G
+|root||root||FIREWALL_EXEMPT|G
 |root||root|localhost|FIREWALL_EXEMPT|G
-|root||alberto||FLUSH_OPTIMIZER_COSTS|G
-|root||debian-sys-maint|localhost|FLUSH_OPTIMIZER_COSTS|G
+|root||root||FLUSH_OPTIMIZER_COSTS|G
 |root||root|localhost|FLUSH_OPTIMIZER_COSTS|G
-|root||alberto||FLUSH_STATUS|G
-|root||debian-sys-maint|localhost|FLUSH_STATUS|G
+|root||root||FLUSH_PRIVILEGES|G
+|root||root|localhost|FLUSH_PRIVILEGES|G
+|root||root||FLUSH_STATUS|G
 |root||root|localhost|FLUSH_STATUS|G
-|root||alberto||FLUSH_TABLES|G
-|root||debian-sys-maint|localhost|FLUSH_TABLES|G
+|root||root||FLUSH_TABLES|G
 |root||root|localhost|FLUSH_TABLES|G
-|root||alberto||FLUSH_USER_RESOURCES|G
-|root||debian-sys-maint|localhost|FLUSH_USER_RESOURCES|G
+|root||root||FLUSH_USER_RESOURCES|G
 |root||root|localhost|FLUSH_USER_RESOURCES|G
-|root||alberto||GROUP_REPLICATION_ADMIN|G
-|root||debian-sys-maint|localhost|GROUP_REPLICATION_ADMIN|G
+|root||root||GROUP_REPLICATION_ADMIN|G
 |root||root|localhost|GROUP_REPLICATION_ADMIN|G
-|root||alberto||GROUP_REPLICATION_STREAM|G
-|root||debian-sys-maint|localhost|GROUP_REPLICATION_STREAM|G
+|root||root||GROUP_REPLICATION_STREAM|G
 |root||root|localhost|GROUP_REPLICATION_STREAM|G
-|root||alberto||INDEX|G
-|root||debian-sys-maint|localhost|INDEX|G
+|root||root||INDEX|G
 |root||root|localhost|INDEX|G
-|root||alberto||INNODB_REDO_LOG_ARCHIVE|G
-|root||debian-sys-maint|localhost|INNODB_REDO_LOG_ARCHIVE|G
+|root||root||INNODB_REDO_LOG_ARCHIVE|G
 |root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
-|root||alberto||INNODB_REDO_LOG_ENABLE|G
-|root||debian-sys-maint|localhost|INNODB_REDO_LOG_ENABLE|G
+|root||root||INNODB_REDO_LOG_ENABLE|G
 |root||root|localhost|INNODB_REDO_LOG_ENABLE|G
-|root||alberto||INSERT|G
-|root||debian-sys-maint|localhost|INSERT|G
+|root||root||INSERT|G
 |root||root|localhost|INSERT|G
-|root||alberto||LOCK TABLES|G
-|root||debian-sys-maint|localhost|LOCK TABLES|G
+|root||root||LOCK TABLES|G
 |root||root|localhost|LOCK TABLES|G
-|root||alberto||PASSWORDLESS_USER_ADMIN|G
-|root||debian-sys-maint|localhost|PASSWORDLESS_USER_ADMIN|G
+|root||root||OPTIMIZE_LOCAL_TABLE|G
+|root||root|localhost|OPTIMIZE_LOCAL_TABLE|G
+|root||root||PASSWORDLESS_USER_ADMIN|G
 |root||root|localhost|PASSWORDLESS_USER_ADMIN|G
-|root||alberto||PERSIST_RO_VARIABLES_ADMIN|G
-|root||debian-sys-maint|localhost|PERSIST_RO_VARIABLES_ADMIN|G
 |root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||root||PERSIST_RO_VARIABLES_ADMIN|G
 |root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
-|root||alberto||PROCESS|G
-|root||debian-sys-maint|localhost|PROCESS|G
+|root||root||PROCESS|G
 |root||root|localhost|PROCESS|G
-|root||alberto||REFERENCES|G
-|root||debian-sys-maint|localhost|REFERENCES|G
+|root||root||REFERENCES|G
 |root||root|localhost|REFERENCES|G
-|root||alberto||RELOAD|G
-|root||debian-sys-maint|localhost|RELOAD|G
+|root||root||RELOAD|G
 |root||root|localhost|RELOAD|G
-|root||alberto||REPLICATION CLIENT|G
-|root||debian-sys-maint|localhost|REPLICATION CLIENT|G
+|root||root||REPLICATION CLIENT|G
 |root||root|localhost|REPLICATION CLIENT|G
-|root||alberto||REPLICATION SLAVE|G
-|root||debian-sys-maint|localhost|REPLICATION SLAVE|G
+|root||root||REPLICATION SLAVE|G
 |root||root|localhost|REPLICATION SLAVE|G
-|root||alberto||REPLICATION_APPLIER|G
-|root||debian-sys-maint|localhost|REPLICATION_APPLIER|G
+|root||root||REPLICATION_APPLIER|G
 |root||root|localhost|REPLICATION_APPLIER|G
-|root||alberto||REPLICATION_SLAVE_ADMIN|G
-|root||debian-sys-maint|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||root||REPLICATION_SLAVE_ADMIN|G
 |root||root|localhost|REPLICATION_SLAVE_ADMIN|G
-|root||alberto||RESOURCE_GROUP_ADMIN|G
-|root||debian-sys-maint|localhost|RESOURCE_GROUP_ADMIN|G
+|root||root||RESOURCE_GROUP_ADMIN|G
 |root||root|localhost|RESOURCE_GROUP_ADMIN|G
-|root||alberto||RESOURCE_GROUP_USER|G
-|root||debian-sys-maint|localhost|RESOURCE_GROUP_USER|G
+|root||root||RESOURCE_GROUP_USER|G
 |root||root|localhost|RESOURCE_GROUP_USER|G
-|root||alberto||ROLE_ADMIN|G
-|root||debian-sys-maint|localhost|ROLE_ADMIN|G
+|root||root||ROLE_ADMIN|G
 |root||root|localhost|ROLE_ADMIN|G
-|root||alberto||SELECT|G
-|root||debian-sys-maint|localhost|SELECT|G
 |root||mysql.infoschema|localhost|SELECT|G
+|root||root||SELECT|G
 |root||root|localhost|SELECT|G
-|root||alberto||SENSITIVE_VARIABLES_OBSERVER|G
-|root||debian-sys-maint|localhost|SENSITIVE_VARIABLES_OBSERVER|G
+|root||root||SENSITIVE_VARIABLES_OBSERVER|G
 |root||root|localhost|SENSITIVE_VARIABLES_OBSERVER|G
-|root||alberto||SERVICE_CONNECTION_ADMIN|G
-|root||debian-sys-maint|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||root||SERVICE_CONNECTION_ADMIN|G
 |root||root|localhost|SERVICE_CONNECTION_ADMIN|G
-|root||alberto||SESSION_VARIABLES_ADMIN|G
-|root||debian-sys-maint|localhost|SESSION_VARIABLES_ADMIN|G
 |root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
+|root||root||SESSION_VARIABLES_ADMIN|G
 |root||root|localhost|SESSION_VARIABLES_ADMIN|G
-|root||alberto||SET_USER_ID|G
-|root||debian-sys-maint|localhost|SET_USER_ID|G
-|root||root|localhost|SET_USER_ID|G
-|root||alberto||SHOW DATABASES|G
-|root||debian-sys-maint|localhost|SHOW DATABASES|G
+|root||root||SET_ANY_DEFINER|G
+|root||root|localhost|SET_ANY_DEFINER|G
+|root||root||SHOW DATABASES|G
 |root||root|localhost|SHOW DATABASES|G
-|root||alberto||SHOW VIEW|G
-|root||debian-sys-maint|localhost|SHOW VIEW|G
+|root||root||SHOW VIEW|G
 |root||root|localhost|SHOW VIEW|G
-|root||alberto||SHOW_ROUTINE|G
-|root||debian-sys-maint|localhost|SHOW_ROUTINE|G
+|root||root||SHOW_ROUTINE|G
 |root||root|localhost|SHOW_ROUTINE|G
-|root||alberto||SHUTDOWN|G
-|root||debian-sys-maint|localhost|SHUTDOWN|G
 |root||mysql.session|localhost|SHUTDOWN|G
+|root||root||SHUTDOWN|G
 |root||root|localhost|SHUTDOWN|G
-|root||alberto||SUPER|G
-|root||debian-sys-maint|localhost|SUPER|G
 |root||mysql.session|localhost|SUPER|G
+|root||root||SUPER|G
 |root||root|localhost|SUPER|G
-|root||alberto||SYSTEM_USER|G
-|root||debian-sys-maint|localhost|SYSTEM_USER|G
 |root||mysql.infoschema|localhost|SYSTEM_USER|G
 |root||mysql.session|localhost|SYSTEM_USER|G
 |root||mysql.sys|localhost|SYSTEM_USER|G
+|root||root||SYSTEM_USER|G
 |root||root|localhost|SYSTEM_USER|G
-|root||alberto||SYSTEM_VARIABLES_ADMIN|G
-|root||debian-sys-maint|localhost|SYSTEM_VARIABLES_ADMIN|G
 |root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||root||SYSTEM_VARIABLES_ADMIN|G
 |root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
-|root||alberto||TABLE_ENCRYPTION_ADMIN|G
-|root||debian-sys-maint|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||root||TABLE_ENCRYPTION_ADMIN|G
 |root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
-|root||alberto||TELEMETRY_LOG_ADMIN|G
-|root||debian-sys-maint|localhost|TELEMETRY_LOG_ADMIN|G
+|root||root||TELEMETRY_LOG_ADMIN|G
 |root||root|localhost|TELEMETRY_LOG_ADMIN|G
-|root||alberto||TRIGGER|G
-|root||debian-sys-maint|localhost|TRIGGER|G
+|root||root||TRANSACTION_GTID_TAG|G
+|root||root|localhost|TRANSACTION_GTID_TAG|G
+|root||root||TRIGGER|G
 |root||root|localhost|TRIGGER|G
-|root||alberto||UPDATE|G
-|root||debian-sys-maint|localhost|UPDATE|G
+|root||root||UPDATE|G
 |root||root|localhost|UPDATE|G
-|root||alberto||XA_RECOVER_ADMIN|G
-|root||debian-sys-maint|localhost|XA_RECOVER_ADMIN|G
+|root||root||XA_RECOVER_ADMIN|G
 |root||root|localhost|XA_RECOVER_ADMIN|G
-|root||alberto||grant option|G
-|root||debian-sys-maint|localhost|grant option|G
+|root||root||grant option|G
 |root||root|localhost|grant option|G
-anime_db|schema||usuario_anime|localhost|ALTER|G
-anime_db|schema||usuario_anime|localhost|ALTER ROUTINE|G
-anime_db|schema||usuario_anime|localhost|CREATE|G
-anime_db|schema||usuario_anime|localhost|CREATE ROUTINE|G
-anime_db|schema||usuario_anime|localhost|CREATE TEMPORARY TABLES|G
-anime_db|schema||usuario_anime|localhost|CREATE VIEW|G
-anime_db|schema||usuario_anime|localhost|DELETE|G
-anime_db|schema||usuario_anime|localhost|DROP|G
-anime_db|schema||usuario_anime|localhost|EVENT|G
-anime_db|schema||usuario_anime|localhost|EXECUTE|G
-anime_db|schema||usuario_anime|localhost|INDEX|G
-anime_db|schema||usuario_anime|localhost|INSERT|G
-anime_db|schema||usuario_anime|localhost|LOCK TABLES|G
-anime_db|schema||usuario_anime|localhost|REFERENCES|G
-anime_db|schema||usuario_anime|localhost|SELECT|G
-anime_db|schema||usuario_anime|localhost|SHOW VIEW|G
-anime_db|schema||usuario_anime|localhost|TRIGGER|G
-anime_db|schema||usuario_anime|localhost|UPDATE|G
 performance_schema|schema||mysql.session|localhost|SELECT|G
 sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>8.0.46</ServerVersion>
+      <ServerVersion>9.6.0</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
@@ -1145,616 +1072,552 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <collation id="287" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="288" parent="1" name="BibliotecaAnime">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="289" parent="1" name="ConcursoFotografia">
+    <schema id="288" parent="1" name="ConcursoFotografia">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-06-10.14:48:15</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-06-11.08:34:41</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="290" parent="1" name="EJER5">
+    <schema id="289" parent="1" name="anime_db">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="291" parent="1" name="SistemaBiblioteca">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="292" parent="1" name="SistemaVentas">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="293" parent="1" name="Tienda">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="294" parent="1" name="TiendaElectronica">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="295" parent="1" name="TiendaTecnologica">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="296" parent="1" name="anime_db">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="297" parent="1" name="bd">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="298" parent="1" name="comidaBD">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="299" parent="1" name="concursoFotografia">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="300" parent="1" name="dam_api">
+    <schema id="290" parent="1" name="dam_api">
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
-    <schema id="301" parent="1" name="deportes_db">
+    <schema id="291" parent="1" name="gimnasio">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="302" parent="1" name="empresa_db">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="303" parent="1" name="information_schema">
+    <schema id="292" parent="1" name="information_schema">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="304" parent="1" name="jugadoresBD">
+    <schema id="293" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="305" parent="1" name="jugadoresDB">
+    <schema id="294" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="306" parent="1" name="libreria">
+    <schema id="295" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="307" parent="1" name="mysql">
+    <schema id="296" parent="1" name="tienda">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="308" parent="1" name="new_schema">
+    <schema id="297" parent="1" name="videojuegos">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="309" parent="1" name="performance_schema">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="310" parent="1" name="persona_bd">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="311" parent="1" name="rrhh_practica">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="312" parent="1" name="sys">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="313" parent="1" name="tienda">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="314" parent="1" name="tienda_informatica_db">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="315" parent="1" name="ventas2024">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="316" parent="1" name="videojuegos">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <user id="317" parent="1" name="alberto"/>
-    <user id="318" parent="1" name="debian-sys-maint">
-      <Host>localhost</Host>
-    </user>
-    <user id="319" parent="1" name="mysql.infoschema">
+    <user id="298" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
     </user>
-    <user id="320" parent="1" name="mysql.session">
+    <user id="299" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
     </user>
-    <user id="321" parent="1" name="mysql.sys">
+    <user id="300" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
     </user>
-    <user id="322" parent="1" name="root">
-      <Host>localhost</Host>
-      <Plugin>auth_socket</Plugin>
-    </user>
-    <user id="323" parent="1" name="usuario_anime">
+    <user id="301" parent="1" name="root"/>
+    <user id="302" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="324" parent="289" name="administrador">
+    <table id="303" parent="288" name="administrador">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="325" parent="289" name="concurso">
+    <table id="304" parent="288" name="concurso">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="326" parent="289" name="estudios">
+    <table id="305" parent="288" name="estudios">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="327" parent="289" name="fotos">
+    <table id="306" parent="288" name="fotos">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="328" parent="289" name="jurado">
+    <table id="307" parent="288" name="jurado">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="329" parent="289" name="participantes">
+    <table id="308" parent="288" name="participantes">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="330" parent="289" name="reservas">
+    <table id="309" parent="288" name="reservas">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="331" parent="289" name="resultados">
+    <table id="310" parent="288" name="resultados">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="332" parent="289" name="roles">
+    <table id="311" parent="288" name="roles">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="333" parent="289" name="usuarios">
+    <table id="312" parent="288" name="usuarios">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="334" parent="324" name="id_usuario">
+    <column id="313" parent="303" name="id_usuario">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="335" parent="324" name="email">
+    <column id="314" parent="303" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="336" parent="324" name="telefono">
+    <column id="315" parent="303" name="telefono">
       <Position>3</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="337" parent="324" name="fecha_registro">
+    <column id="316" parent="303" name="fecha_registro">
       <DefaultExpression>(curdate())</DefaultExpression>
       <Position>4</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="338" parent="324" name="hora_registro">
+    <column id="317" parent="303" name="hora_registro">
       <DefaultExpression>(curtime())</DefaultExpression>
       <Position>5</Position>
       <StoredType>time|0s</StoredType>
     </column>
-    <foreign-key id="339" parent="324" name="administrador_ibfk_1">
+    <foreign-key id="318" parent="303" name="administrador_ibfk_1">
       <ColNames>id_usuario</ColNames>
       <RefColNames>id_usuario</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <index id="340" parent="324" name="PRIMARY">
+    <index id="319" parent="303" name="PRIMARY">
       <ColNames>id_usuario</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="341" parent="324" name="email">
+    <index id="320" parent="303" name="email">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="342" parent="324" name="PRIMARY">
+    <key id="321" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="343" parent="324" name="email">
+    <key id="322" parent="303" name="email">
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
-    <column id="344" parent="325" name="id_concurso">
+    <column id="323" parent="304" name="id_concurso">
       <AutoIncrement>3</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="345" parent="325" name="nombre">
+    <column id="324" parent="304" name="nombre">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="346" parent="325" name="fecha_inicio">
+    <column id="325" parent="304" name="fecha_inicio">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="347" parent="325" name="fecha_fin">
+    <column id="326" parent="304" name="fecha_fin">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="348" parent="325" name="descripcion">
+    <column id="327" parent="304" name="descripcion">
       <Position>5</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="349" parent="325" name="estado">
+    <column id="328" parent="304" name="estado">
       <DefaultExpression>&apos;Activo&apos;</DefaultExpression>
       <Position>6</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <index id="350" parent="325" name="PRIMARY">
+    <index id="329" parent="304" name="PRIMARY">
       <ColNames>id_concurso</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="351" parent="325" name="PRIMARY">
+    <key id="330" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="352" parent="326" name="id_estudio">
+    <column id="331" parent="305" name="id_estudio">
       <AutoIncrement>3</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="353" parent="326" name="nombre">
+    <column id="332" parent="305" name="nombre">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="354" parent="326" name="ubicacion">
+    <column id="333" parent="305" name="ubicacion">
       <Position>3</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <index id="355" parent="326" name="PRIMARY">
+    <index id="334" parent="305" name="PRIMARY">
       <ColNames>id_estudio</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="356" parent="326" name="PRIMARY">
+    <key id="335" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="357" parent="327" name="id_foto">
+    <column id="336" parent="306" name="id_foto">
       <AutoIncrement>4</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="358" parent="327" name="id_usuario_participante">
+    <column id="337" parent="306" name="id_usuario_participante">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="359" parent="327" name="nombre_foto">
+    <column id="338" parent="306" name="nombre_foto">
       <Position>3</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="360" parent="327" name="imagen">
+    <column id="339" parent="306" name="imagen">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>longblob|0s</StoredType>
     </column>
-    <column id="361" parent="327" name="fecha_subida">
+    <column id="340" parent="306" name="fecha_subida">
       <DefaultExpression>(curdate())</DefaultExpression>
       <Position>5</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="362" parent="327" name="hora_subida">
+    <column id="341" parent="306" name="hora_subida">
       <DefaultExpression>(curtime())</DefaultExpression>
       <Position>6</Position>
       <StoredType>time|0s</StoredType>
     </column>
-    <foreign-key id="363" parent="327" name="fotos_ibfk_1">
+    <foreign-key id="342" parent="306" name="fotos_ibfk_1">
       <ColNames>id_usuario_participante</ColNames>
       <RefColNames>id_usuario</RefColNames>
       <RefTableName>participantes</RefTableName>
     </foreign-key>
-    <index id="364" parent="327" name="PRIMARY">
+    <index id="343" parent="306" name="PRIMARY">
       <ColNames>id_foto</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="365" parent="327" name="id_usuario_participante">
+    <index id="344" parent="306" name="id_usuario_participante">
       <ColNames>id_usuario_participante</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="366" parent="327" name="PRIMARY">
+    <key id="345" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="367" parent="328" name="id_usuario">
+    <column id="346" parent="307" name="id_usuario">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="368" parent="328" name="email">
+    <column id="347" parent="307" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="369" parent="328" name="telefono">
+    <column id="348" parent="307" name="telefono">
       <Position>3</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="370" parent="328" name="fecha_registro">
+    <column id="349" parent="307" name="fecha_registro">
       <DefaultExpression>(curdate())</DefaultExpression>
       <Position>4</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="371" parent="328" name="hora_registro">
+    <column id="350" parent="307" name="hora_registro">
       <DefaultExpression>(curtime())</DefaultExpression>
       <Position>5</Position>
       <StoredType>time|0s</StoredType>
     </column>
-    <foreign-key id="372" parent="328" name="jurado_ibfk_1">
+    <foreign-key id="351" parent="307" name="jurado_ibfk_1">
       <ColNames>id_usuario</ColNames>
       <RefColNames>id_usuario</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <index id="373" parent="328" name="PRIMARY">
+    <index id="352" parent="307" name="PRIMARY">
       <ColNames>id_usuario</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="374" parent="328" name="email">
+    <index id="353" parent="307" name="email">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="375" parent="328" name="PRIMARY">
+    <key id="354" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="376" parent="328" name="email">
+    <key id="355" parent="307" name="email">
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
-    <column id="377" parent="329" name="id_usuario">
+    <column id="356" parent="308" name="id_usuario">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="378" parent="329" name="email">
+    <column id="357" parent="308" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="379" parent="329" name="telefono">
+    <column id="358" parent="308" name="telefono">
       <Position>3</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="380" parent="329" name="fecha_registro">
+    <column id="359" parent="308" name="fecha_registro">
       <DefaultExpression>(curdate())</DefaultExpression>
       <Position>4</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="381" parent="329" name="hora_registro">
+    <column id="360" parent="308" name="hora_registro">
       <DefaultExpression>(curtime())</DefaultExpression>
       <Position>5</Position>
       <StoredType>time|0s</StoredType>
     </column>
-    <foreign-key id="382" parent="329" name="participantes_ibfk_1">
+    <foreign-key id="361" parent="308" name="participantes_ibfk_1">
       <ColNames>id_usuario</ColNames>
       <RefColNames>id_usuario</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <index id="383" parent="329" name="PRIMARY">
+    <index id="362" parent="308" name="PRIMARY">
       <ColNames>id_usuario</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="384" parent="329" name="email">
+    <index id="363" parent="308" name="email">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="385" parent="329" name="PRIMARY">
+    <key id="364" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="386" parent="329" name="email">
+    <key id="365" parent="308" name="email">
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
-    <column id="387" parent="330" name="id_reserva">
+    <column id="366" parent="309" name="id_reserva">
       <AutoIncrement>3</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="388" parent="330" name="id_estudio">
+    <column id="367" parent="309" name="id_estudio">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="389" parent="330" name="id_usuario_participante">
+    <column id="368" parent="309" name="id_usuario_participante">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="390" parent="330" name="fecha_inicio">
+    <column id="369" parent="309" name="fecha_inicio">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="391" parent="330" name="fecha_fin">
+    <column id="370" parent="309" name="fecha_fin">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <foreign-key id="392" parent="330" name="reservas_ibfk_1">
+    <foreign-key id="371" parent="309" name="reservas_ibfk_1">
       <ColNames>id_estudio</ColNames>
       <RefColNames>id_estudio</RefColNames>
       <RefTableName>estudios</RefTableName>
     </foreign-key>
-    <foreign-key id="393" parent="330" name="reservas_ibfk_2">
+    <foreign-key id="372" parent="309" name="reservas_ibfk_2">
       <ColNames>id_usuario_participante</ColNames>
       <RefColNames>id_usuario</RefColNames>
       <RefTableName>participantes</RefTableName>
     </foreign-key>
-    <index id="394" parent="330" name="PRIMARY">
+    <index id="373" parent="309" name="PRIMARY">
       <ColNames>id_reserva</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="395" parent="330" name="id_estudio">
+    <index id="374" parent="309" name="id_estudio">
       <ColNames>id_estudio</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="396" parent="330" name="id_usuario_participante">
+    <index id="375" parent="309" name="id_usuario_participante">
       <ColNames>id_usuario_participante</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="397" parent="330" name="PRIMARY">
+    <key id="376" parent="309" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="398" parent="331" name="id_resultado">
+    <column id="377" parent="310" name="id_resultado">
       <AutoIncrement>7</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="399" parent="331" name="id_usuario_participante">
+    <column id="378" parent="310" name="id_usuario_participante">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="400" parent="331" name="id_concurso">
+    <column id="379" parent="310" name="id_concurso">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="401" parent="331" name="id_usuario_jurado">
+    <column id="380" parent="310" name="id_usuario_jurado">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="402" parent="331" name="puntuacion">
+    <column id="381" parent="310" name="puntuacion">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="403" parent="331" name="fecha_registro">
+    <column id="382" parent="310" name="fecha_registro">
       <DefaultExpression>(curdate())</DefaultExpression>
       <Position>6</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="404" parent="331" name="hora_registro">
+    <column id="383" parent="310" name="hora_registro">
       <DefaultExpression>(curtime())</DefaultExpression>
       <Position>7</Position>
       <StoredType>time|0s</StoredType>
     </column>
-    <foreign-key id="405" parent="331" name="resultados_ibfk_1">
+    <foreign-key id="384" parent="310" name="resultados_ibfk_1">
       <ColNames>id_usuario_participante</ColNames>
       <RefColNames>id_usuario</RefColNames>
       <RefTableName>participantes</RefTableName>
     </foreign-key>
-    <foreign-key id="406" parent="331" name="resultados_ibfk_2">
+    <foreign-key id="385" parent="310" name="resultados_ibfk_2">
       <ColNames>id_concurso</ColNames>
       <RefColNames>id_concurso</RefColNames>
       <RefTableName>concurso</RefTableName>
     </foreign-key>
-    <foreign-key id="407" parent="331" name="resultados_ibfk_3">
+    <foreign-key id="386" parent="310" name="resultados_ibfk_3">
       <ColNames>id_usuario_jurado</ColNames>
       <RefColNames>id_usuario</RefColNames>
       <RefTableName>jurado</RefTableName>
     </foreign-key>
-    <index id="408" parent="331" name="PRIMARY">
+    <index id="387" parent="310" name="PRIMARY">
       <ColNames>id_resultado</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="409" parent="331" name="unq_voto_juez">
+    <index id="388" parent="310" name="unq_voto_juez">
       <ColNames>id_usuario_participante
 id_concurso
 id_usuario_jurado</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="410" parent="331" name="id_concurso">
+    <index id="389" parent="310" name="id_concurso">
       <ColNames>id_concurso</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="411" parent="331" name="id_usuario_jurado">
+    <index id="390" parent="310" name="id_usuario_jurado">
       <ColNames>id_usuario_jurado</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="412" parent="331" name="PRIMARY">
+    <key id="391" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="413" parent="331" name="unq_voto_juez">
+    <key id="392" parent="310" name="unq_voto_juez">
       <UnderlyingIndexName>unq_voto_juez</UnderlyingIndexName>
     </key>
-    <column id="414" parent="332" name="id_rol">
+    <column id="393" parent="311" name="id_rol">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="415" parent="332" name="nombre_rol">
+    <column id="394" parent="311" name="nombre_rol">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <index id="416" parent="332" name="PRIMARY">
+    <index id="395" parent="311" name="PRIMARY">
       <ColNames>id_rol</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="417" parent="332" name="PRIMARY">
+    <key id="396" parent="311" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="418" parent="333" name="id_usuario">
+    <column id="397" parent="312" name="id_usuario">
       <AutoIncrement>7</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="419" parent="333" name="id_rol">
+    <column id="398" parent="312" name="id_rol">
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="420" parent="333" name="nombre">
+    <column id="399" parent="312" name="nombre">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="421" parent="333" name="pass">
+    <column id="400" parent="312" name="pass">
       <Position>4</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="422" parent="333" name="activo">
+    <column id="401" parent="312" name="activo">
       <DefaultExpression>1</DefaultExpression>
       <Position>5</Position>
       <StoredType>tinyint(1)|0s</StoredType>
     </column>
-    <foreign-key id="423" parent="333" name="usuarios_ibfk_1">
+    <foreign-key id="402" parent="312" name="usuarios_ibfk_1">
       <ColNames>id_rol</ColNames>
       <RefColNames>id_rol</RefColNames>
       <RefTableName>roles</RefTableName>
     </foreign-key>
-    <index id="424" parent="333" name="PRIMARY">
+    <index id="403" parent="312" name="PRIMARY">
       <ColNames>id_usuario</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="425" parent="333" name="id_rol">
+    <index id="404" parent="312" name="id_rol">
       <ColNames>id_rol</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="426" parent="333" name="PRIMARY">
+    <key id="405" parent="312" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
