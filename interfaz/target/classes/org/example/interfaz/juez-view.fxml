@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #F3F3F3;"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.interfaz.ControladorJuez">
+    <children>
+
+        <VBox alignment="CENTER" spacing="25.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label text="Panel de Jueces" textFill="#1A1A2E">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Label>
+
+                <Label text="Añada las calificaciones y consulte la clasificación" textFill="#555555">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="-15.0" />
+                    </VBox.margin>
+                </Label>
+
+                <Label fx:id="lblSaludo" text="Cargando usuario..." textFill="#5D46E6">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="30.0" top="-5.0" />
+                    </VBox.margin>
+                </Label>
+
+                <HBox alignment="CENTER" spacing="30.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#abrirAsignarPuntuaciones" prefHeight="75.0" prefWidth="240.0" style="-fx-background-color: #5D46E6; -fx-background-radius: 18; -fx-cursor: hand;" text="Asignar Puntuaciones" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <effect>
+                                <DropShadow blurType="GAUSSIAN" height="15.0" radius="7.0" width="15.0">
+                                    <color>
+                                        <Color opacity="0.15" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </Button>
+
+                        <Button mnemonicParsing="false" onAction="#abrirConsultarResultados" prefHeight="75.0" prefWidth="240.0" style="-fx-background-color: #5D46E6; -fx-background-radius: 18; -fx-cursor: hand;" text="Consultar Resultados" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <effect>
+                                <DropShadow blurType="GAUSSIAN" height="15.0" radius="7.0" width="15.0">
+                                    <color>
+                                        <Color opacity="0.15" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <VBox.margin>
+                <Insets top="-20.0" />
+            </VBox.margin>
+        </VBox>
+
+        <HBox alignment="BOTTOM_RIGHT">
+            <children>
+                <Button mnemonicParsing="false" onAction="#cerrarJ"
+                        style="-fx-background-color: transparent;
+                        -fx-text-fill: #6B7280;
+                        -fx-font-weight: bold;
+                        -fx-font-size: 13px;
+                        -fx-cursor: hand;" text="← Cerrar Sesión" />
+            </children>
+            <padding>
+                <Insets bottom="25.0" right="30.0" />
+            </padding>
+        </HBox>
+
+    </children>
+</VBox>

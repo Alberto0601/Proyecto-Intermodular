@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15.0" style="-fx-background-color: #FFFFFF; -fx-padding: 25; -fx-font-family: 'Segoe UI', sans-serif;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.interfaz.ControladorModificarConcurso">
+    <children>
+        <VBox spacing="5.0">
+            <children>
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #111827;" text="Modificar Concurso" />
+                <Label style="-fx-font-size: 13px; -fx-text-fill: #6B7280;" text="Modifica los parámetros necesarios del concurso seleccionado." />
+            </children>
+        </VBox>
+        <Separator />
+
+        <GridPane hgap="15.0" vgap="18.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" minWidth="140.0" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="35.0" />
+                <RowConstraints minHeight="80.0" />
+                <RowConstraints minHeight="35.0" />
+                <RowConstraints minHeight="35.0" />
+                <RowConstraints minHeight="35.0" />
+            </rowConstraints>
+            <children>
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Nombre del Concurso:" />
+                <TextField fx:id="txtNombre" prefHeight="35.0" promptText="Ej: Certamen Fotografía Otoño"
+                           style="-fx-background-radius: 8; -fx-border-color: #D1D5DB; -fx-border-radius: 8;" GridPane.columnIndex="1" />
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Descripción:" GridPane.rowIndex="1" />
+                <TextArea fx:id="txtDescripcion" prefHeight="80.0" promptText="Escribe las bases o detalles del concurso..." wrapText="true"
+                          style="-fx-background-radius: 8; -fx-border-color: #D1D5DB; -fx-border-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Fecha de Inicio:" GridPane.rowIndex="2" />
+                <DatePicker fx:id="dpFechaInicio" maxWidth="1.7976931348623157E308" prefHeight="35.0"
+                            style="-fx-background-radius: 8; -fx-border-color: #D1D5DB; -fx-border-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Fecha de Finalización:" GridPane.rowIndex="3" />
+                <DatePicker fx:id="dpFechaFin" maxWidth="1.7976931348623157E308" prefHeight="35.0"
+                            style="-fx-background-radius: 8; -fx-border-color: #D1D5DB; -fx-border-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #374151;" text="Estado del Concurso:" GridPane.rowIndex="4" />
+                <ComboBox fx:id="comboEstado" maxWidth="1.7976931348623157E308" prefHeight="35.0"
+                          style="-fx-background-radius: 8; -fx-border-color: #D1D5DB; -fx-border-radius: 8; -fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+
+        <Separator />
+
+        <HBox alignment="CENTER_RIGHT" spacing="12.0">
+            <children>
+                <Button fx:id="btnCancelar" onAction="#cancelar" prefHeight="35.0" prefWidth="100.0"
+                        style="-fx-background-color: #F3F4F6; -fx-text-fill: #4B5563; -fx-background-radius: 8; -fx-font-weight: bold; -fx-cursor: hand;" text="Cancelar" />
+                <Button fx:id="btnGuardar" onAction="#guardarCambios" prefHeight="35.0" prefWidth="150.0"
+                        style="-fx-background-color: #5543EE; -fx-text-fill: #FFFFFF; -fx-background-radius: 8; -fx-font-weight: bold; -fx-cursor: hand;" text="Guardar Cambios" />
+            </children>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

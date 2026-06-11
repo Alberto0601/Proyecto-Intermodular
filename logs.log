@@ -1,0 +1,76 @@
+[2026-06-10 16:46:13] [ERROR] Error crítico en la base de datos al loguear a admin: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling Driver.connect() [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+[2026-06-10 16:48:52] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 16:48:52] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 17:05:42] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 17:05:42] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 17:08:01] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 17:08:01] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 17:19:06] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 17:19:07] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 17:21:34] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 17:21:34] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:07:52] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:07:53] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:16:18] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:16:18] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:16:52] [INFORMACIÓN: ] Intento de inicio de sesión: a
+[2026-06-10 20:16:52] [INFO] Login EXITOSO. Usuario: a - Rol ID: 3
+[2026-06-10 20:21:22] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:21:22] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:21:22] [ERROR] Error crítico en la base de datos al loguear a admin: 
+/D:/Proyecto%20F/Proyecto-Intermodular/interfaz/target/classes/org/example/interfaz/administrador-view.fxml:80
+
+[2026-06-10 20:23:32] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:23:33] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:25:09] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:25:09] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:51:33] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:51:33] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 20:54:57] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 20:54:57] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 22:07:21] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 22:07:21] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-10 22:13:55] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 22:13:55] [ADVERTENCIA] Login FALLIDO. Credenciales incorrectas para: admin
+[2026-06-10 22:14:08] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-10 22:14:08] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 10:35:09] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-11 10:35:10] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 10:45:06] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-11 10:45:06] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 10:45:46] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruiz
+[2026-06-11 10:45:46] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
+[2026-06-11 10:58:15] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-11 10:58:15] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 10:59:12] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruiz
+[2026-06-11 10:59:12] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
+[2026-06-11 12:00:22] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruiz
+[2026-06-11 12:00:23] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
+[2026-06-11 12:02:00] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruíz
+[2026-06-11 12:02:00] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
+[2026-06-11 12:03:54] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruíz
+[2026-06-11 12:03:54] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
+[2026-06-11 12:04:44] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruíz
+[2026-06-11 12:04:45] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
+[2026-06-11 12:06:55] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-11 12:06:55] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 12:07:24] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruíz
+[2026-06-11 12:07:24] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
+[2026-06-11 12:13:27] [INFORMACIÓN: ] Intento de inicio de sesión: Ana López
+[2026-06-11 12:13:27] [INFO] Login EXITOSO. Usuario: Ana López - Rol ID: 2
+[2026-06-11 12:21:36] [INFORMACIÓN: ] Intento de inicio de sesión: Ana López
+[2026-06-11 12:21:37] [INFO] Login EXITOSO. Usuario: Ana López - Rol ID: 2
+[2026-06-11 12:23:05] [INFORMACIÓN: ] Intento de inicio de sesión: admin
+[2026-06-11 12:23:05] [INFO] Login EXITOSO. Usuario: Admin - Rol ID: 1
+[2026-06-11 12:23:36] [INFORMACIÓN: ] Intento de inicio de sesión: Ana López
+[2026-06-11 12:23:37] [INFO] Login EXITOSO. Usuario: Ana López - Rol ID: 2
+[2026-06-11 12:26:49] [INFORMACIÓN: ] Intento de inicio de sesión: Carlos Ruiz
+[2026-06-11 12:26:49] [INFO] Login EXITOSO. Usuario: Carlos Ruiz - Rol ID: 3
+[2026-06-11 12:28:08] [INFORMACIÓN: ] Intento de inicio de sesión: Ana López
+[2026-06-11 12:28:08] [INFO] Login EXITOSO. Usuario: Ana López - Rol ID: 2
+[2026-06-11 12:33:27] [INFORMACIÓN: ] Intento de inicio de sesión: Ana López
+[2026-06-11 12:33:28] [INFO] Login EXITOSO. Usuario: Ana López - Rol ID: 2
