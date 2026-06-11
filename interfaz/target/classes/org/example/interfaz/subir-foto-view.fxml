@@ -11,7 +11,10 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="350.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #F3F3F3; -fx-padding: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.interfaz.ControladorSubirFoto">
+<VBox prefHeight="350.0" prefWidth="500.0" spacing="20.0"
+      style="-fx-background-color: #F3F3F3; -fx-padding: 30;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.interfaz.ControladorSubirFoto">
     <children>
         <VBox spacing="5.0">
             <children>
@@ -20,7 +23,7 @@
                         <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
-                <Label text="Escriba un título descriptivo y seleccione su imagen." textFill="#555555">
+                <Label text="Escriba un título descriptivo y seleccione la imagen." textFill="#555555">
                     <font>
                         <Font size="13.0" />
                     </font>
@@ -38,7 +41,7 @@
                                 <Font name="System Bold" size="13.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="txtNombreFoto" prefHeight="35.0" promptText="Ej. Atardecer en la playa" style="-fx-background-radius: 8; -fx-border-color: #D1D5DB; -fx-border-radius: 8;" />
+                        <TextField fx:id="txtNombreFoto" prefHeight="35.0" promptText="Ej. Foto de tu ex" style="-fx-background-radius: 8; -fx-border-color: #D1D5DB; -fx-border-radius: 8;" />
                     </children>
                 </VBox>
                 <VBox spacing="5.0">

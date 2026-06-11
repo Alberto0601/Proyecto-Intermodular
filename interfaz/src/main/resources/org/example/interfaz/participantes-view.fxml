@@ -56,7 +56,7 @@
                             </effect>
                         </Button>
 
-                        <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="240.0" style="-fx-background-color: #5D46E6; -fx-background-radius: 18; -fx-cursor: hand;" text="Consultar Resultados" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#abrirConsultarResultados" prefHeight="75.0" prefWidth="240.0" style="-fx-background-color: #5D46E6; -fx-background-radius: 18; -fx-cursor: hand;" text="Consultar Resultados" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="18.0" />
                             </font>

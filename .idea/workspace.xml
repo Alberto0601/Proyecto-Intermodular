@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed390c24-df2a-4612-952b-8b5efae1b583" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/60bc35ab-c2eb-47cc-95e4-01044c2c4a1f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/60bc35ab-c2eb-47cc-95e4-01044c2c4a1f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorParticipante.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorParticipante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/participantes-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/participantes-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorParticipante.class" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorParticipante.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/participantes-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/participantes-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/subir-foto-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/subir-foto-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +119,7 @@
       <workItem from="1781102684648" duration="2353000" />
       <workItem from="1781113538795" duration="4729000" />
       <workItem from="1781122330001" duration="82000" />
-      <workItem from="1781166769905" duration="980000" />
+      <workItem from="1781166769905" duration="2726000" />
     </task>
     <servers />
   </component>

@@ -85,4 +85,33 @@ public class ControladorParticipante {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void abrirConsultarResultados() {
+        if (usuarioIniciadoP == null) {
+            System.err.println("No se pueden consultar notas sin sesión activa.");
+            return;
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/interfaz/ventana-resultados.fxml"));
+            Parent root = loader.load();
+
+            // Obtenemos el controlador de la tabla e inyectamos el usuario
+            ControladorVerResultados controller = loader.getController();
+            controller.setUsuarioLogueado(usuarioIniciadoP);
+
+            // Levantamos el nuevo escenario modal
+            Stage stageModal = new Stage();
+            stageModal.setTitle("Mis Calificaciones Obtenidas");
+            stageModal.initModality(javafx.stage.Modality.APPLICATION_MODAL); // Bloquea la de abajo
+            stageModal.setScene(new Scene(root));
+            stageModal.setResizable(false);
+            stageModal.showAndWait();
+
+        } catch (IOException e) {
+            System.err.println("Error al abrir la modal de visualización de notas: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }
