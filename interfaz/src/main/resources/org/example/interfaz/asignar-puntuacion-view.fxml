@@ -54,12 +54,12 @@
 
                 <VBox spacing="5.0">
                     <children>
-                        <Label text="Puntuación (1 al 10):" textFill="#1A1A2E">
+                        <Label text="Puntuación (1 al 100):" textFill="#1A1A2E">
                             <font>
                                 <Font name="System Bold" size="13.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="txtPuntuacion" prefHeight="35.0" promptText="Ej: 9" style="-fx-background-radius: 8;" />
+                        <TextField fx:id="txtPuntuacion" prefHeight="35.0" promptText="Ej: 85" style="-fx-background-radius: 8;" />
                     </children>
                 </VBox>
             </children>

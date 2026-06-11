@@ -82,35 +82,52 @@ public class ControladorAsignarPuntuacion {
         try {
             Integer puntuacion = Integer.parseInt(strPuntuacion);
 
-            if (puntuacion < 1 || puntuacion > 10) {
-                mostrarAlerta(Alert.AlertType.WARNING, "Rango Incorrecto", "La nota debe ser un número entero entre 1 y 10.");
+            // CAMBIO: Ahora validamos que la nota esté entre 1 y 100
+            if (puntuacion < 1 || puntuacion > 100) {
+                mostrarAlerta(Alert.AlertType.WARNING, "Rango Incorrecto", "La nota debe ser un número entero entre 1 y 100.");
                 return;
             }
 
             try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("concursoFotos");
                  EntityManager em = emf.createEntityManager()) {
 
-                em.getTransaction().begin();
-
                 // Buscamos al Jurado basándonos en el usuario de la sesión activa
                 Jurado juradoActivo = em.find(Jurado.class, juezLogueado.getId());
 
                 if (juradoActivo == null) {
                     mostrarAlerta(Alert.AlertType.ERROR, "Error de Sesión", "No se encontró un perfil de Jurado válido para el usuario actual.");
-                    em.getTransaction().rollback();
                     return;
                 }
 
-                // Mezclamos (merge) las instancias seleccionadas de los combos para asociarlas a la sesión actual de JPA
+                // Comprobación antiduplicados (Evita el error 'unq_voto_juez')
+                String jpqlCheck = "SELECT COUNT(r) FROM Resultado r WHERE " +
+                        "r.idConcurso.id = :idConcurso AND " +
+                        "r.idUsuarioParticipante.id = :idParticipante AND " +
+                        "r.idUsuarioJurado.id = :idJuez";
+
+                Long conteoVotos = em.createQuery(jpqlCheck, Long.class)
+                        .setParameter("idConcurso", concursoSeleccionado.getId())
+                        .setParameter("idParticipante", participanteSeleccionado.getId())
+                        .setParameter("idJuez", juradoActivo.getId())
+                        .getSingleResult();
+
+                if (conteoVotos > 0) {
+                    mostrarAlerta(Alert.AlertType.WARNING, "Calificación Ya Existente",
+                            "Ya has asignado una puntuación a este participante en este concurso.\n" +
+                                    "No se permiten calificaciones duplicadas.");
+                    return;
+                }
+
+                em.getTransaction().begin();
+
                 Concurso cManaged = em.merge(concursoSeleccionado);
                 Participante pManaged = em.merge(participanteSeleccionado);
 
-                // Instanciamos el registro con tu tabla 'resultados'
                 Resultado resultado = new Resultado();
                 resultado.setIdConcurso(cManaged);
                 resultado.setIdUsuarioParticipante(pManaged);
                 resultado.setIdUsuarioJurado(juradoActivo);
-                resultado.setPuntuacion(puntuacion);
+                resultado.setPuntuacion(puntuacion); // Se guarda el entero (hasta 100)
                 resultado.setFechaRegistro(LocalDate.now());
                 resultado.setHoraRegistro(LocalTime.now());
 
@@ -124,7 +141,7 @@ public class ControladorAsignarPuntuacion {
         } catch (NumberFormatException e) {
             mostrarAlerta(Alert.AlertType.ERROR, "Formato Inválido", "La puntuación debe ser un número entero válido.");
         } catch (Exception e) {
-            mostrarAlerta(Alert.AlertType.ERROR, "Error", "Error al guardar el resultado: " + e.getMessage());
+            mostrarAlerta(Alert.AlertType.ERROR, "Error", "Error inesperado al guardar el resultado: " + e.getMessage());
             e.printStackTrace();
         }
     }
