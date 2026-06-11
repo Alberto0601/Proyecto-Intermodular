@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed390c24-df2a-4612-952b-8b5efae1b583" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.ai/mcp/mcp.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorParticipante.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorParticipante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/participantes-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/participantes-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorParticipante.class" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/ControladorParticipante.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/participantes-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/participantes-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/subir-foto-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/target/classes/org/example/interfaz/subir-foto-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorJuez.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorJuez.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorVerResultados.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/ControladorVerResultados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/juez-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/juez-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +118,7 @@
       <workItem from="1781102684648" duration="2353000" />
       <workItem from="1781113538795" duration="4729000" />
       <workItem from="1781122330001" duration="82000" />
-      <workItem from="1781166769905" duration="2726000" />
+      <workItem from="1781166769905" duration="3229000" />
     </task>
     <servers />
   </component>

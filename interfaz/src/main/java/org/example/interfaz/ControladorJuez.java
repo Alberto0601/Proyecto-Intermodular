@@ -17,26 +17,21 @@ public class ControladorJuez {
     @FXML
     private Label lblSaludo;
 
+    private Usuario usuarioIniciadoJ;
+
     /**
-     *
-     * @param evento este evento cierra sesion y te devuelve a la pantalla de login
+     * Cierra sesión y te devuelve a la pantalla de login
      */
     @FXML
-    private void cerrarJ(ActionEvent evento) {//evento para cerrar sesión
+    private void cerrarJ(ActionEvent evento) {
         try {
-            //cargamos el login
-            FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource("/org/example/interfaz/hello-view.fxml"));//vuelvo hacia atrás cargando la interfaz anterior
+            FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource("/org/example/interfaz/hello-view.fxml"));
             Parent root = fxmlLoad.load();
 
-            //crear el nuevo escenario para login
-            Stage interfazLogin = new Stage();//crear la interfaz vacia
-            interfazLogin.setScene(new Scene(root));//crear el decorado y colocarlo
-
-            //tamaños para la ventana que regresa
+            Stage interfazLogin = new Stage();
+            interfazLogin.setScene(new Scene(root));
             interfazLogin.setWidth(650);
             interfazLogin.setHeight(650);
-
-            //muestra la interfaz(se vuelve visible la interfaz)
             interfazLogin.show();
 
             Stage stageActual = (Stage) ((Node) evento.getSource()).getScene().getWindow();
@@ -47,16 +42,46 @@ public class ControladorJuez {
         }
     }
 
-    private Usuario usuarioIniciadoJ;
+    /**
+     * Abre la ventana modal con el historial visual de puntuaciones puestas por este juez.
+     */
+    @FXML
+    private void abrirConsultarResultados() {
+        if (usuarioIniciadoJ == null) {
+            System.err.println("No se pueden consultar datos sin sesión de juez activa.");
+            return;
+        }
+
+        try {
+            // Carga relativa infalible: busca el FXML en la misma carpeta que este controlador
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ver-resultados-juez-view.fxml"));
+            Parent root = loader.load();
+
+            // Pasamos la sesión al controlador de la tabla modal
+            ControladorVerResultadosJuez modalController = loader.getController();
+            modalController.setJuezLogueado(usuarioIniciadoJ);
+
+            // Configuramos el comportamiento modal
+            Stage stageModal = new Stage();
+            stageModal.setTitle("Historial de Calificaciones Emitidas");
+            stageModal.initModality(javafx.stage.Modality.APPLICATION_MODAL);
+            stageModal.setScene(new Scene(root));
+            stageModal.setResizable(false);
+            stageModal.showAndWait();
+
+        } catch (IOException e) {
+            System.err.println("Error al cargar la modal de resultados del juez.");
+            e.printStackTrace();
+        }
+    }
 
     /**
-     * metodo que me muestra que si el usuario existe manda un mensaje del usuario que ha iniciado sesión
-     * @param usuario
+     * Configura el mensaje de saludo inicial
      */
     public void setUsuarioJuez(Usuario usuario) {
         this.usuarioIniciadoJ = usuario;
 
-        if (usuarioIniciadoJ != null) {//si usuario iniciado existe...
+        if (usuarioIniciadoJ != null) {
             lblSaludo.setText("El juez " + usuarioIniciadoJ.getNombre() + " ha iniciado sesión");
         }
     }
