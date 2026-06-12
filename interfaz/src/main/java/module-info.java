@@ -12,4 +12,6 @@ module org.example.interfaz {
 
     opens org.example.interfaz to javafx.fxml;
     exports org.example.interfaz;
+
+    exports servicios;
 }
